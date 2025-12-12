@@ -1,0 +1,529 @@
+/* css/pages/hule-industrias.css */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO HULE INDUSTRIAS ======= */
+.hero-hule-industrias {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(27, 27, 27, 0.4)), 
+                url('../../images/hero-hule-industrias-bg.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-hule-industrias .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-hule-industrias .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN INTRODUCCIÓN ======= */
+.introduccion-industrias {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.introduccion-content .lead {
+    color: #c40000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.introduccion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.introduccion-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 44, 91, 0.1), transparent);
+    z-index: 1;
+}
+
+.introduccion-image img {
+    transition: transform 0.5s ease;
+}
+
+.introduccion-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN INDUSTRIAS ======= */
+.industrias-section {
+    padding: 80px 0;
+}
+
+.industria-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.industria-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.industria-icon {
+    background: linear-gradient(135deg, #002c5b);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.industria-content {
+    padding: 25px;
+}
+
+.industria-content h3 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.industria-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.industria-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.industria-content li {
+    padding: 5px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.industria-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+}
+
+.btn-industria {
+    background-color: #002c5b;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+}
+
+.btn-industria:hover {
+    background-color: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN PRODUCTOS INDUSTRIALES ======= */
+.productos-industriales-section {
+    padding: 80px 0;
+}
+
+.producto-industrial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.producto-industrial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.producto-industrial-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.producto-industrial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto-industrial-card:hover .producto-industrial-image img {
+    transform: scale(1.1);
+}
+
+.producto-industrial-content {
+    padding: 20px;
+}
+
+.producto-industrial-content h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.producto-industrial-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ======= SECCIÓN COMPUESTOS ESPECIALES ======= */
+.compuestos-especiales-section {
+    padding: 80px 0;
+}
+
+.compuesto-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.compuesto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.compuesto-header {
+    background: linear-gradient(135deg, #002c5b, #1a4a7a);
+    color: white;
+    padding: 20px;
+}
+
+.compuesto-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.compuesto-body {
+    padding: 20px;
+}
+
+.compuesto-body p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.compuesto-aplicaciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ======= SECCIÓN BENEFICIOS INDUSTRIALES ======= */
+.beneficios-industriales-section {
+    padding: 80px 0;
+}
+
+.beneficio-industrial-card {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.beneficio-industrial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-industrial-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.beneficio-industrial-card h4 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.beneficio-industrial-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN CASOS DE ÉXITO ======= */
+.casos-exito-section {
+    padding: 80px 0;
+}
+
+.caso-exito-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.caso-exito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.caso-exito-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.caso-exito-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.caso-exito-card:hover .caso-exito-image img {
+    transform: scale(1.1);
+}
+
+.caso-exito-content {
+    padding: 20px;
+}
+
+.caso-exito-content h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.caso-exito-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.caso-exito-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resultado-item {
+    background: #e9ecef;
+    color: #495057;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ======= SECCIÓN CERTIFICACIONES INDUSTRIAS ======= */
+.certificaciones-industrias-section {
+    padding: 80px 0;
+}
+
+.certificacion-item {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.certificacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certificacion-item img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.certificacion-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #002c5b) !important;
+}
+
+.invitacion-contacto-section h2 {
+    font-weight: 700;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-hule-industrias {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .introduccion-industrias,
+    .industrias-section,
+    .productos-industriales-section,
+    .compuestos-especiales-section,
+    .beneficios-industriales-section,
+    .casos-exito-section,
+    .certificaciones-industrias-section {
+        padding: 60px 0;
+    }
+    
+    .industria-content,
+    .beneficio-industrial-card {
+        padding: 20px 15px;
+    }
+    
+    .industria-icon {
+        padding: 20px;
+        font-size: 2rem;
+    }
+    
+    .beneficio-industrial-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-hule-industrias h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .industria-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+@media (prefers-reduced-motion: reduce) {
+    .introduccion-image img,
+    .industria-card,
+    .producto-industrial-card,
+    .compuesto-card,
+    .beneficio-industrial-card,
+    .caso-exito-card,
+    .certificacion-item {
+        transition: none;
+    }
+    
+    .industria-card:hover,
+    .producto-industrial-card:hover,
+    .compuesto-card:hover,
+    .beneficio-industrial-card:hover,
+    .caso-exito-card:hover,
+    .certificacion-item:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .industria-card,
+    .producto-industrial-card,
+    .compuesto-card,
+    .beneficio-industrial-card,
+    .caso-exito-card,
+    .certificacion-item {
+        border: 2px solid #002c5b;
+    }
+}

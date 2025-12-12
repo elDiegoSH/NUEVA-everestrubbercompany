@@ -1,0 +1,369 @@
+/* ESTILOS ESPECÍFICOS PARA SECTOR METALMECÁNICO hule-sector-metalmecanico.css*/
+
+/* ======= VARIABLES ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+    --metal-primary: #6c757d;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-sector-metal {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/hule-sector-metalmecanico/hero-metalmecanico.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-sector-metal h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-sector-metal .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Resto del CSS igual que los anteriores, solo cambian colores primarios */
+
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= TABLA DE RESISTENCIA QUÍMICA ======= */
+.tabla-resistencia {
+    border-color: #dee2e6;
+}
+
+.tabla-resistencia thead th {
+    background-color: var(--everest-blue);
+    color: white;
+    font-weight: 600;
+    border-color: var(--everest-blue);
+    text-align: center;
+}
+
+.tabla-resistencia tbody td {
+    vertical-align: middle;
+}
+
+.tabla-resistencia tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-resistencia tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.resistencia-excelente {
+    color: #28a745;
+    font-weight: 600;
+    background-color: rgba(40, 167, 69, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.resistencia-alta {
+    color: #20c997;
+    font-weight: 600;
+    background-color: rgba(32, 201, 151, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.resistencia-moderada {
+    color: #ffc107;
+    font-weight: 600;
+    background-color: rgba(255, 193, 7, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* ======= CARACTERÍSTICAS DESTACADAS ======= */
+.caracteristica-destacada {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-top: 4px solid var(--quimico-primary);
+}
+
+.caracteristica-destacada i {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.caracteristica-destacada h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.caracteristica-destacada p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ======= TARJETAS DE APLICACIÓN ======= */
+.aplicacion-sector-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--quimico-primary);
+}
+
+.aplicacion-sector-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.aplicacion-sector-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.aplicacion-sector-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.aplicacion-sector-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.aplicacion-especificaciones {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.aplicacion-especificaciones li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.9rem;
+}
+
+.aplicacion-especificaciones li:before {
+    content: "•";
+    color: var(--quimico-primary);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+}
+
+/* ======= BENEFICIOS SECTOR ======= */
+.beneficios-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.beneficio-sector {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--quimico-primary);
+}
+
+.beneficio-icon {
+    background: var(--quimico-primary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.beneficio-content h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.beneficio-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ======= TABLA DE PRODUCTOS ======= */
+.tabla-productos {
+    border-color: #dee2e6;
+}
+
+.tabla-productos thead th {
+    background-color: var(--everest-blue);
+    color: white;
+    font-weight: 600;
+    border-color: var(--everest-blue);
+    text-align: center;
+}
+
+.tabla-productos tbody td {
+    vertical-align: middle;
+}
+
+.tabla-productos tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-productos tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* ======= INVITACIÓN CONTACTO ======= */
+.invitacion-sector-contacto {
+    background: linear-gradient(135deg, var(--everest-blue), #004080);
+}
+
+.invitacion-sector-contacto .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-sector-contacto .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-sector-quimico {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-sector-quimico h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-sector-quimico .lead {
+        font-size: 1.1rem;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    .beneficio-sector {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .beneficio-icon {
+        margin: 0 auto 15px;
+    }
+    
+    .aplicacion-sector-card h4 {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-sector-quimico h1 {
+        font-size: 1.6rem;
+    }
+    
+    .tabla-resistencia,
+    .tabla-productos {
+        font-size: 0.9rem;
+    }
+    
+    .aplicacion-sector-card {
+        padding: 20px;
+    }
+    
+    .resistencia-excelente,
+    .resistencia-alta,
+    .resistencia-moderada {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+}

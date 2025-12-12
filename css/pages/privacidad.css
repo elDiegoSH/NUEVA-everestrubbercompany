@@ -1,0 +1,191 @@
+/* css/pages/privacidad.css */
+
+/* Estilos generales */
+.t3-mainbody {
+    padding: 40px 0;
+}
+
+.t3-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.page_header {
+    margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #002c5b;
+}
+
+.page_header h1 {
+    color: #002c5b;
+    font-weight: 700;
+    margin: 0;
+}
+
+.small-word {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.text-azul {
+    color: #002c5b !important;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #002c5b;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* Títulos de secciones */
+h2.small-word2,
+h3.small-word4,
+h4.small-word2,
+h5.text-azul {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c40000;
+    padding-bottom: 10px;
+}
+
+h2.small-word2 {
+    font-size: 1.8rem;
+}
+
+h3.small-word4 {
+    font-size: 1.6rem;
+}
+
+h4.small-word2 {
+    font-size: 1.4rem;
+}
+
+h5.text-azul {
+    font-size: 1.2rem;
+}
+
+/* Listas */
+.list2 {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.list2 li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.list2 li:before {
+    content: "•";
+    color: #c40000;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+/* Párrafos */
+p {
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Enlaces */
+a {
+    color: #002c5b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c40000;
+    text-decoration: underline;
+}
+
+.enlace-contraste-alto {
+    font-weight: 600;
+}
+
+/* Texto fuerte */
+strong {
+    color: #002c5b;
+    font-weight: 600;
+}
+
+/* Sidebars (ocultos por defecto) */
+#fixed-sidebar-left,
+#fixed-sidebar-right {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .t3-content {
+        padding: 20px;
+    }
+    
+    .small-word {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    h2.small-word2 {
+        font-size: 1.5rem;
+    }
+    
+    h3.small-word4 {
+        font-size: 1.3rem;
+    }
+    
+    h4.small-word2 {
+        font-size: 1.2rem;
+    }
+    
+    h5.text-azul {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .t3-mainbody {
+        padding: 20px 0;
+    }
+    
+    .t3-content {
+        padding: 15px;
+    }
+    
+    .page_header {
+        margin-bottom: 30px;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+}

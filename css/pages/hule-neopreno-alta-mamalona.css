@@ -1,0 +1,367 @@
+/* hule-neopreno-alta.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE HULE NEOPRENO ALTA ESPECIFICACIÓN */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-hule-neopreno-alta {
+    background: linear-gradient(rgba(0, 44, 91, 0.8), rgba(0, 44, 91, 0.9)), 
+                url('../../images/hule-neopreno-alta/hero-hule-neopreno-alta.webp') center/cover;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-hule-neopreno-alta h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-hule-neopreno-alta .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background: var(--everest-red);
+    border: 2px solid var(--everest-red);
+    color: var(--everest-white);
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background: transparent;
+    color: var(--everest-red);
+    transform: translateY(-2px);
+}
+
+/* ======= PESTAÑAS ======= */
+.nav-tabs {
+    border-bottom: 2px solid var(--everest-blue);
+}
+
+.nav-tabs .nav-link {
+    color: var(--everest-blue);
+    font-weight: 600;
+    border: none;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: var(--everest-red);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--everest-blue);
+    color: var(--everest-white);
+    border: none;
+    border-radius: 5px 5px 0 0;
+}
+
+/* ======= LISTAS ======= */
+.caracteristicas-neopreno-alta ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristicas-neopreno-alta li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.caracteristicas-neopreno-alta li:before {
+    content: "✓";
+    color: var(--everest-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ======= TARJETAS DE COMPARACIÓN ======= */
+.material-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+    border-top: 4px solid var(--everest-blue);
+}
+
+.material-card h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.material-features {
+    margin-bottom: 15px;
+}
+
+.feature-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.feature-label {
+    font-weight: 500;
+    color: var(--everest-black);
+}
+
+.feature-value {
+    font-weight: 600;
+}
+
+.feature-value.excellent {
+    color: #28a745;
+}
+
+.feature-value.good {
+    color: #20c997;
+}
+
+.feature-value.fair {
+    color: #ffc107;
+}
+
+.feature-value.poor {
+    color: #dc3545;
+}
+
+/* ======= TARJETAS DE APLICACIONES ======= */
+.aplicacion-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.aplicacion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--everest-blue);
+}
+
+.aplicacion-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.aplicacion-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ======= BENEFICIOS ======= */
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.beneficio-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.beneficio-content h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.beneficio-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======= TABLAS ======= */
+.tabla-datos {
+    margin-bottom: 2rem;
+}
+
+.tabla-datos caption {
+    font-size: 1.2rem;
+    font-weight: 600;
+    caption-side: top;
+    padding: 10px 0;
+}
+
+.tabla-datos th {
+    background-color: var(--everest-blue);
+    color: var(--everest-white);
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+}
+
+.tabla-datos td {
+    border: 1px solid #dee2e6;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.small-word2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.small-word3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--everest-blue), transparent);
+    margin: 2rem 0;
+}
+
+/* ======= ALERTAS Y TARJETAS ESPECIALES ======= */
+.card.border-primary {
+    border-color: var(--everest-blue) !important;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-hule-neopreno-alta {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-hule-neopreno-alta h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-hule-neopreno-alta .lead {
+        font-size: 1.2rem;
+    }
+    
+    .small-word {
+        font-size: 2rem;
+    }
+    
+    .small-word2 {
+        font-size: 1.6rem;
+    }
+    
+    .beneficio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .beneficio-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .material-card {
+        margin-bottom: 20px;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-hule-neopreno-alta h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tabla-datos {
+        font-size: 0.9rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+    }
+    
+    .feature-value {
+        margin-top: 5px;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+    }
+    
+    .nav-tabs .nav-link {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}

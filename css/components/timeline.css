@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* TIMELINE INTERACTIVA */
+.timeline-interactive {
+    position: relative;
+    margin-top: 60px;
+}
+
+.timeline-years {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.timeline-years::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.timeline-year {
+    background: white;
+    border: 3px solid #e9ecef;
+    color: #6c757d;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-year:hover {
+    border-color: #c40000;
+    color: #c40000;
+    transform: scale(1.1);
+}
+
+.timeline-year.active {
+    background: #c40000;
+    border-color: #c40000;
+    color: white;
+    transform: scale(1.1);
+}
+
+.timeline-content-wrapper {
+    position: relative;
+    min-height: 400px;
+}
+
+.timeline-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.timeline-content.active {
+    display: block;
+}
+
+.timeline-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.timeline-features li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline-years {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .timeline-years::before {
+        display: none;
+    }
+    
+    .timeline-year {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content-wrapper {
+        min-height: 500px;
+    }
+}

@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ESTILOS REIGN PARA PÁGINA NOSOTROS */
+
+/* Hero Section al estilo Reign */
+.reign-hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reign-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.reign-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reign-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 44, 91, 0.9) 0%, rgba(181, 26, 43, 0.7) 100%);
+    z-index: 2;
+}
+
+.reign-hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    padding-top: 120px;
+}
+
+/* Breadcrumbs al estilo Reign */
+.reign-breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.reign-breadcrumb .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.reign-breadcrumb .breadcrumb-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.reign-breadcrumb .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.reign-breadcrumb .breadcrumb-item a:hover {
+    color: white;
+}
+
+.reign-breadcrumb .breadcrumb-item.active {
+    color: white;
+}
+
+.reign-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+    content: "›";
+}
+
+/* Títulos Hero */
+.reign-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reign-hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.text-highlight {
+    color: #B51A2B;
+    font-weight: 700;
+}
+
+/* Secciones generales */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #002c5b;
+    margin-bottom: 1rem;
+}
+
+/* Tarjetas de estadísticas */
+.stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Tarjetas de valores */
+.value-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #002c5b, #B51A2B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.value-card h4 {
+    color: #002c5b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Tarjetas de equipo */
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 2rem;
+}
+
+.team-info h4 {
+    color: #002c5b;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.team-position {
+    color: #B51A2B;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.team-bio {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Logos de certificaciones */
+.certification-logo {
+    max-height: 80px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.certification-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reign-hero-section {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .reign-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .reign-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .reign-hero-title {
+        font-size: 2rem;
+    }
+    
+    .reign-hero-content {
+        padding-top: 80px;
+    }
+}

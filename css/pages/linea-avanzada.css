@@ -1,0 +1,422 @@
+/* css/pages/linea-avanzada.css */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO LÍNEA AVANZADA ======= */
+.hero-linea-avanzada {
+    background: url('../../images/hero-linea-avanzada-bg.png') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-linea-avanzada .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-linea-avanzada .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN INTRODUCCIÓN ======= */
+.introduccion-linea-avanzada {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.introduccion-content .lead {
+    color: #c40000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.introduccion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.introduccion-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 44, 91, 0.1), transparent);
+    z-index: 1;
+}
+
+.introduccion-image img {
+    transition: transform 0.5s ease;
+}
+
+.introduccion-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN PRODUCTOS DESTACADOS ======= */
+.productos-destacados-section {
+    padding: 80px 0;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.producto-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.producto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover .producto-image img {
+    transform: scale(1.1);
+}
+
+.producto-content {
+    padding: 25px;
+}
+
+.producto-content h3 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.producto-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-producto {
+    background-color: #002c5b;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-producto:hover {
+    background-color: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN FABRICACIÓN Y ASESORÍA ======= */
+.fabricacion-asesoria-section {
+    padding: 80px 0;
+}
+
+.fabricacion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fabricacion-image img {
+    transition: transform 0.5s ease;
+}
+
+.fabricacion-image:hover img {
+    transform: scale(1.05);
+}
+
+.servicio-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.servicio-item i {
+    background: linear-gradient(135deg, #002c5b);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.servicio-item h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.servicio-item p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ======= SECCIÓN APLICACIONES ======= */
+.aplicaciones-linea-avanzada {
+    padding: 80px 0;
+}
+
+.aplicacion-card {
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aplicacion-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+.aplicacion-card h4 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.aplicacion-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN BENEFICIOS ======= */
+.beneficios-linea-avanzada {
+    padding: 80px 0;
+}
+
+.beneficio-card {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.beneficio-card h4 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.beneficio-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN PREGUNTAS FRECUENTES ======= */
+.faq-linea-avanzada {
+    padding: 80px 0;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #002c5b;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #002c5b;
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 44, 91, 0.2);
+}
+
+.accordion-body {
+    padding: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #002c5b) !important;
+}
+
+.invitacion-contacto-section h2 {
+    font-weight: 700;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-linea-avanzada {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .introduccion-linea-avanzada,
+    .productos-destacados-section,
+    .fabricacion-asesoria-section,
+    .aplicaciones-linea-avanzada,
+    .beneficios-linea-avanzada,
+    .faq-linea-avanzada {
+        padding: 60px 0;
+    }
+    
+    .producto-content,
+    .aplicacion-card,
+    .beneficio-card {
+        padding: 25px 15px;
+    }
+    
+    .servicio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .servicio-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .aplicacion-icon,
+    .beneficio-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-linea-avanzada h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .producto-image {
+        height: 180px;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+/* @media (prefers-reduced-motion: reduce) {
+    .introduccion-image img,
+    .fabricacion-image img,
+    .producto-card,
+    .aplicacion-card,
+    .beneficio-card {
+        transition: none;
+    }
+    
+    .producto-card:hover,
+    .aplicacion-card:hover,
+    .beneficio-card:hover */

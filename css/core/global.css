@@ -1,0 +1,1309 @@
+
+@charset "utf-8";
+/* CSS Document */
+/* ===== FONT AWESOME OPTIMIZADO ===== */
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../font-awesome/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FontAwesomeBrands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../font-awesome/fa-brands-400.woff2') format('woff2');
+}
+
+/* Solo las clases que realmente usas */
+.fas, .fa-solid, .fa-envelope, .fa-chevron-right, .fa-chevron-up, 
+.fa-arrow-right, .fa-cogs, .fa-globe-americas, .fa-balance-scale,
+.fa-user-cog, .fa-project-diagram, .fa-users, .fa-user-tie, 
+.fa-trophy, .fa-facebook-f, .fa-twitter, .fa-linkedin-in, .fa-instagram {
+  font-family: 'FontAwesome';
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fab, .fa-brands {
+  font-family: 'FontAwesomeBrands';
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Unicode de solo los iconos que usas */
+.fa-envelope::before { content: "\f0e0"; }
+.fa-chevron-right::before { content: "\f054"; }
+.fa-chevron-up::before { content: "\f077"; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-cogs::before { content: "\f085"; }
+.fa-globe-americas::before { content: "\f57d"; }
+.fa-balance-scale::before { content: "\f24e"; }
+.fa-user-cog::before { content: "\f4fe"; }
+.fa-project-diagram::before { content: "\f542"; }
+.fa-users::before { content: "\f0c0"; }
+.fa-user-tie::before { content: "\f508"; }
+.fa-trophy::before { content: "\f091"; }
+.fa-facebook-f::before { content: "\f39e"; }
+.fa-twitter::before { content: "\f099"; }
+.fa-linkedin-in::before { content: "\f0e1"; }
+.fa-instagram::before { content: "\f16d"; }
+
+/* OPTIMIZACIÓN DE FUENTES - FONT AWESOME YOYO*/
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('css/font-awesome/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('css/font-awesome/fa-brands-400.woff2') format('woff2');
+}
+
+
+/* ===== TIPOGRAFÍA REIGN - ESTILO DELGADO ===== */
+
+/* Importar fuentes con todos los pesos */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ROBOTO ULTRA DELGADO para todo el texto */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200; /* Extra Light */
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  color: #333;
+}
+
+/* Párrafos y texto general aún más delgado */
+p, 
+.text-justify,
+.lead,
+.footer-description,
+.product-info,
+.news-excerpt,
+.testimonio-text,
+.cotizacion-content p,
+.exportaciones-content p,
+.compromiso-card p,
+.icon-card p,
+.stats-content p,
+.airboss-news-section p,
+.airboss-triple-section p,
+.rollos-placas-section p,
+.everest-company-fullwidth p,
+.company-block-full p,
+.mod_custom p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Extra Light */
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* RALEWAY LIGHT para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 2.2em; /* ← Aumenta el tamaño (1em = 100%) */
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+/* Títulos específicos de secciones */
+.hero-everest h1,
+.section-title,
+.airboss-news-section h3,
+.airboss-triple-section h3,
+.everest-company-fullwidth h2,
+.everest-company-fullwidth h3,
+.rollos-placas-section h2,
+.certifications-title,
+.airboss-icons-section h2,
+.airboss-stats-section h2,
+.testimonios-clientes-section h2,
+.compromiso-ambiental-section h2,
+.exportaciones-section h2,
+.footer-title,
+.product-title,
+.news-card h3,
+.triple-card h3,
+.icon-card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Light */
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+}
+
+/* Hero title - un poco más de peso pero manteniendo elegancia */
+.hero-everest h1 {
+  font-weight: 400; /* Regular */
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: -0.01em;
+}
+
+/* Botones y navegación - Roboto Regular */
+.btn,
+.btn-primary,
+.btn-hero,
+.btn-airboss,
+.btn-cotizacion,
+.navbar-nav .nav-link,
+.filter-btn,
+.product-btn,
+.news-link {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400; /* Regular */
+  letter-spacing: 0.02em;
+}
+
+/* Topbar - Roboto Light */
+.topbar,
+.top-links,
+.top-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300; /* Light */
+}
+
+/* Textos pequeños y metadata - Roboto Thin */
+.text-muted,
+.news-date,
+.product-category,
+.testimonio-author,
+.counter-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100; /* Thin */
+  opacity: 0.8;
+}
+
+/* Números y estadísticas - Raleway Regular */
+.counter-value,
+.stat-number {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+/* Texto en negrita - Solo Regular, no Bold */
+strong, 
+b,
+.fw-semibold,
+.fw-bold {
+  font-weight: 400; /* Regular */
+}
+
+/* Elementos específicos */
+.text-red.fs-3.fw-semibold {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+.mod_custom .titulo-directores {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; /* Medium - un poco más de énfasis */
+}
+
+/* Override de Bootstrap si es necesario */
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+/* Ajustes de contraste para mejor legibilidad */
+@media (max-width: 768px) {
+  body {
+    font-weight: 300; /* Un poco más de peso en móvil */
+  }
+  
+  p, .text-justify, .lead {
+    font-weight: 300;
+  }
+}
+
+/* Si aún se ve muy grueso, prueba con pesos más livianos */
+.airboss-news-section p,
+.airboss-triple-section p,
+.rollos-placas-section p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Extra Light */
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+  background: #292929;
+  color: #fff;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 6px 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.top-links li a:hover {
+  background-color: #004080;
+  text-decoration: underline;
+}
+
+.topbar .dropdown-menu {
+  top: auto;
+  bottom: -5px;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 1050;
+}
+
+.topbar .dropdown-menu .dropdown-item {
+  color: #fff;
+}
+
+.topbar .dropdown-menu .dropdown-item:hover {
+  background-color: #003366;
+}
+
+/* Submenús del topbar */
+.top-links li ul {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004080;
+  margin: 0;
+  padding: 0;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1000;
+}
+
+.top-links li ul li a {
+  padding: 8px 14px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.top-links li ul ul {
+  left: 100%;
+  top: 0;
+  background-color: #004b99;
+}
+
+/* =========================
+   NAVBAR STICKY - SOLUCIÓN DEFINITIVA
+========================= */
+.navbar.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: #292929 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .nav-link {
+  color: #fff !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #c40000 !important;
+}
+
+.navbar.scrolled .navbar-toggler {
+  border-color: #fff !important;
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* =========================
+   CAMBIO DE LOGO AUTOMÁTICO
+========================= */
+.navbar.scrolled .navbar-brand img {
+  content: url('../../images/logo/logo-blanco.png');
+}
+
+/* =========================
+   MENÚ PRINCIPAL
+========================= */
+.navbar-nav .nav-link {
+  color: #002c5b;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c40000;
+}
+
+.dropdown-menu {
+  border: none;
+  border-top: 3px solid #c40000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-airboss-large {
+  background: #c40000;
+  color: white;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-airboss-large:hover {
+  background: #a00000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(196, 0, 0, 0.3);
+}
+
+.btn-airboss {
+  background: #c40000;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-airboss:hover {
+  background: #a00000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(196, 0, 0, 0.3);
+}
+
+.btn-info {
+  background: #002c5b;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-info:hover {
+  background: #001a33;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 44, 91, 0.3);
+}
+
+.btn-info i {
+    margin-left: 8px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.btn-info:hover i {
+    transform: translateX(2px);
+}
+
+/* =========================
+   BOTÓN PRIMARY PERSONALIZADO - AZUL EVEREST
+========================= */
+.btn-primary {
+    background: #002c5b !important;
+    border-color: #002c5b !important;
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #a00000 !important;
+    border-color: #c40000 !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 44, 91, 0.3);
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 3px rgba(0, 44, 91, 0.25) !important;
+}
+
+.btn-primary i {
+    margin-left: 8px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateX(2px);
+}
+
+/* =========================
+   BOTÓN PRIMARY PERSONALIZADO - AZUL EVEREST
+========================= */
+.btn-primary2 {
+    background: #002c5b !important;
+    border-color: #002c5b !important;
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary2:hover {
+    background: #a00000 !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 44, 91, 0.3);
+}
+
+.btn-primary2:focus {
+    box-shadow: 0 0 0 3px rgba(0, 44, 91, 0.25) !important;
+}
+
+.btn-primary2 i {
+    margin-left: 8px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary2:hover i {
+    transform: translateX(2px);
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #c40000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(196, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.back-to-top:hover {
+  background: #a00000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(196, 0, 0, 0.4);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   CONTENIDO GENERAL
+========================= */
+.content-section {
+  padding: 80px 0;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* =========================
+   CLASES DE TIPOGRAFÍA Y ESTADO DE MENÚ
+========================= */
+.text-white {
+  color: #fff !important;
+}
+
+.text-red {
+  color: #c40000 !important;
+}
+
+.text-blue {
+  color: #002c5b !important;
+}
+
+.text-black{
+  color: #000000 !important;
+}
+
+/* CLASE PARA ALARGAR LETRAS EN ALTO */
+.texto-alargado {
+    transform: scaleY(1.40) !important;
+	padding-bottom: 10px;
+}
+
+.menu-active,
+.navbar-nav .nav-link.active {
+  color: #c40000 !important;
+  font-weight: 700;
+  border-bottom: 3px solid #c40000;
+  padding-bottom: 2px;
+}
+
+.dropdown-menu .dropdown-item.active {
+  color: #c40000;
+  font-weight: 600;
+  background-color: #f2f2f2;
+}
+
+/* =========================
+   ANIMACIONES PARA SUBMENÚS
+========================= */
+@keyframes fadeIn {
+  from { opacity: 0; visibility: hidden; transform: translateY(-10px); }
+  to { opacity: 1; visibility: visible; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; visibility: visible; transform: translateY(0); }
+  to { opacity: 0; visibility: hidden; transform: translateY(-10px); }
+}
+
+/* Hover para mostrar submenús - FORZAR display block */
+.top-links li:hover > ul,
+.navbar-nav .nav-item.dropdown:hover > .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  animation: fadeIn 0.3s ease forwards !important;
+}
+
+/* Submenús que no están activos - desaparición lenta */
+.top-links li:not(:hover) > ul,
+.navbar-nav .nav-item.dropdown:not(:hover) > .dropdown-menu,
+.dropdown-submenu:not(:hover) > .dropdown-menu {
+  animation: fadeOut 1.8s ease forwards !important;
+  pointer-events: none !important;
+}
+
+/* Asegurar que los submenús tengan la estructura correcta */
+.navbar-nav .dropdown-menu {
+  border: none !important;
+  border-top: 3px solid #c40000 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+  display: none;
+  opacity: 0;
+}
+
+/* Hover solo en desktop */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block !important;
+    animation: fadeIn 0.3s ease forwards !important;
+  }
+
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block !important;
+    animation: fadeIn 0.3s ease forwards !important;
+  }
+}
+
+/* =========================
+   CONEXIÓN ENTRE MENÚ Y SUBMENÚ
+========================= */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown-menu {
+    margin-top: 0 !important; /* Eliminar espacio */
+  }
+  
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0 !important; /* Pegarlo al menú padre */
+    margin-left: 0 !important;
+  }
+  
+  /* Crear área de hover entre menú y submenú */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 20px;
+    height: 100%;
+    background: transparent;
+  }
+}
+
+/* =========================
+   FOOTER ESTILOS
+========================= */
+.everest-footer {
+  background: #212121;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-title {
+  color: #FF4A4A;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.footer-description {
+  line-height: 1.6;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: #c40000;
+}
+
+
+/* =========================
+   FOOTER MENU ACTIVE STATE
+========================= */
+.footer-menu .active {
+    color: #FF4A4A !important;
+    font-weight: 700;
+    position: relative;
+}
+
+.footer-menu .active::before {
+    color: #FF4A4A;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+
+/* Opcional: efecto hover para todos los items */
+.footer-menu a:not(.active):hover {
+    color: #c40000 !important;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.payment-info,
+.shipping-info,
+.export-info {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.payment-methods,
+.world-map {
+  margin: 15px 0;
+}
+
+.contact-details {
+  margin-top: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.contact-item i {
+  color: #c40000;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.btn-contact {
+  background: #c40000;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: #a00000;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.copyright {
+  opacity: 0.8;
+}
+
+.privacy-link {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.privacy-link:hover {
+  color: #c40000;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.social-link {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #c40000;
+}
+
+/* CSS PARA EL ENLACE BLANCO: */
+.email-link {
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #c40000 !important;
+}
+
+/* =========================
+   CARDS DE PRODUCTOS
+========================= */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-content {
+  padding: 25px;
+}
+
+.product-title {
+  color: #002c5b;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-category {
+  color: #c40000;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.product-variants {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   BLOQUE DIRECTORES CON FONDO
+========================= */
+.mod_custom__single-block.bg-directores {
+    background: linear-gradient(rgba(0, 44, 91, 0.2), rgba(0, 44, 91, 0.1)),
+                url('../../images/naren-ceja-gerardo-ceja-directores-grupoeverest.webp') center/cover;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mod_custom__single-block.bg-directores:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-directores {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1.0);
+}
+
+.mod_custom__single-block.bg-directores p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1.0);
+}
+
+.mod_custom__single-block.bg-directores img {
+    max-width: 200px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.mod_custom__single-block .caption {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.mod_custom__single-block .caption strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.mod_custom__single-block .caption em {
+    color: #c40000;
+    font-style: italic;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+/* Estilos para enlaces de noticias - Alto contraste */
+.news-link {
+    color: #002c5b !important; /* Azul corporativo oscuro */
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.news-link:hover,
+.news-link:focus {
+    color: #c40000 !important; /* Rojo corporativo en hover */
+    border-bottom-color: #c40000;
+    text-decoration: none;
+}
+
+/* =========================
+   MENÚ MÓVIL - SOLUCIÓN NUCLEAR CON FONDO GRIS
+========================= */
+@media (max-width: 991.98px) {
+  #mainMenu.navbar-collapse.collapse {
+    display: none !important;
+  }
+  
+  #mainMenu.navbar-collapse.collapse.show {
+    display: block !important;
+    position: fixed !important;
+    top: 112px !important;
+    right: 0 !important;
+    width: 80vw !important;
+    max-width: 320px !important;
+    height: calc(100vh - 80px) !important;
+    background: #292929 !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+    overflow-y: auto !important;
+    z-index: 9999 !important;
+  }
+
+  /* TIPOGRAFÍA MÁS PEQUEÑA */
+  #mainMenu.navbar-collapse.collapse.show .nav-link {
+    color: #fff !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* ESTADO ACTIVE EN ROJO #FF4A4A */
+  #mainMenu.navbar-collapse.collapse.show .nav-link.active,
+  #mainMenu.navbar-collapse.collapse.show .nav-link.menu-active,
+  #mainMenu.navbar-collapse.collapse.show .dropdown-item.active {
+    color: #FF4A4A !important;
+    background-color: transparent !important;
+    font-size: 0.9rem !important;
+  }
+  
+  #mainMenu.navbar-collapse.collapse.show .dropdown-menu {
+    background: #333 !important;
+  }
+  
+  #mainMenu.navbar-collapse.collapse.show .dropdown-item {
+    color: #fff !important;
+    font-size: 0.85rem !important;
+  }
+  
+  #mainMenu.navbar-collapse.collapse.show .dropdown-item:hover {
+    background: #444 !important;
+  }
+
+  /* Textos de submenús aún más pequeños */
+  #mainMenu.navbar-collapse.collapse.show .dropdown-submenu .dropdown-item {
+    font-size: 0.8rem !important;
+  }
+
+  .navbar {
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+  }
+}
+
+/* =========================
+   NAVBAR MOBILE + ANIMACIÓN HAMBURGUESA
+========================= */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    border: 2px solid #002c5b !important;
+    padding: 0.5rem 0.75rem !important;
+    background: #fff !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .navbar-toggler:hover {
+    background: #f8f9fa !important;
+    border-color: #c40000 !important;
+    /* QUITAR transform del hover */
+    box-shadow: 0 4px 12px rgba(196, 0, 0, 0.15) !important;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(0, 44, 91, 0.25) !important;
+    outline: none !important;
+  }
+
+  /* Animación de 90 grados SOLO cuando está activo (clic) */
+  .navbar-toggler[aria-expanded="true"] {
+    transform: rotate(90deg);
+    border-color: #c40000 !important;
+    background: #f8f9fa !important;
+  }
+
+  .navbar.scrolled .navbar-toggler {
+    border-color: #fff !important;
+    background: #292929 !important;
+  }
+
+  .navbar.scrolled .navbar-toggler:hover {
+    border-color: #c40000 !important;
+  }
+
+  .navbar.scrolled .navbar-toggler[aria-expanded="true"] {
+    transform: rotate(90deg);
+    border-color: #c40000 !important;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+  .block-content {
+    padding: 30px;
+  }
+  
+  .block-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .company-hero {
+    padding: 80px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .company-block-full .row {
+    min-height: auto;
+  }
+  
+  .block-content {
+    padding: 50px 40px;
+  }
+  
+  .block-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .top-links li ul {
+    position: static;
+    opacity: 1;
+    display: none;
+    transition: none;
+  }
+
+  .top-links li.active > ul {
+    display: block;
+  }
+
+  .company-hero {
+    padding: 60px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .block-content {
+    padding: 40px 30px;
+  }
+  
+  .block-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .block-content p {
+    font-size: 1rem;
+  }
+  
+  .block-image {
+    height: 300px;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .mod_custom__single-block.bg-directores {
+    padding: 40px 25px;
+    min-height: 400px;
+  }
+  
+  .titulo-directores {
+    font-size: 1.5rem;
+  }
+  
+  .mod_custom__single-block.bg-directores p {
+    font-size: 1rem;
+  }
+
+  /* Espacio entre columnas en móvil */
+  .content-section .row.align-items-center .col-md-6 {
+    margin-bottom: 50px !important;
+  }
+  
+  .content-section .row.align-items-center .col-md-6:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .everest-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-main .col-md-3 {
+    margin-bottom: 30px;
+  }
+  
+  .social-links {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .block-content {
+    padding: 30px 20px;
+  }
+  
+  .block-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-hero,
+  .btn-airboss-large,
+  .btn-airboss,
+  .btn-info {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* Control de imágenes en cards de noticias */
+.news-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(362 / 301 * 100%); /* Mantiene proporción original */
+}
+
+.news-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+

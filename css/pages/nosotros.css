@@ -1,0 +1,567 @@
+/* css/pages/nosotros.css */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO NOSOTROS ======= */
+.hero-nosotros {
+    background: linear-gradient(rgba(0, 44, 91, 0.5), rgba(0, 44, 91, 0.2)), 
+                url('../../images/hero-nosotros-bg.png') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-nosotros .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-nosotros .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN NUESTRA HISTORIA ======= */
+.nuestra-historia-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.historia-content .lead {
+    color: #c40000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.historia-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.historia-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 44, 91, 0.1), transparent);
+    z-index: 1;
+}
+
+.historia-image img {
+    transition: transform 0.5s ease;
+}
+
+.historia-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN LÍNEA DE TIEMPO ======= */
+.timeline-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #002c5b);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    background: #002c5b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 44, 91, 0.3);
+    min-width: 120px;
+    text-align: center;
+}
+
+.timeline-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 40px;
+    flex: 1;
+    position: relative;
+    border-left: 4px solid #c40000;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    border-left: none;
+    border-right: 4px solid #c40000;
+}
+
+.timeline-content h3 {
+    color: #002c5b;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        margin-left: 60px;
+    }
+    
+    .timeline-year {
+        position: absolute;
+        left: -80px;
+        min-width: 100px;
+    }
+    
+    .timeline-content {
+        margin: 0;
+        border-left: 4px solid #c40000 !important;
+        border-right: none !important;
+    }
+}
+
+/* ======= SECCIÓN VALORES ======= */
+.valores-section {
+    padding: 80px 0;
+}
+
+.valor-card {
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 4px solid transparent;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    border-top-color: #c40000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.valor-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+.valor-card h3 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.valor-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN EQUIPO DIRECTIVO ======= */
+.equipo-directivo-section {
+    padding: 80px 0;
+}
+
+.directivo-card {
+    padding: 40px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.directivo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.directivo-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    border: 5px solid #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #002c5b;
+}
+
+.directivo-card h3 {
+    color: #002c5b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.directivo-cargo {
+    color: #c40000;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.directivo-descripcion {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN COMPROMISO AMBIENTAL ======= */
+.compromiso-ambiental-section {
+    padding: 80px 0;
+}
+
+.compromiso-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.compromiso-image img {
+    transition: transform 0.5s ease;
+}
+
+.compromiso-image:hover img {
+    transform: scale(1.05);
+}
+
+.compromiso-content h3 {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.compromiso-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.compromiso-list li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.compromiso-list li:last-child {
+    border-bottom: none;
+}
+
+/* ======= SECCIÓN CERTIFICACIONES NOSOTROS ======= */
+.certificaciones-nosotros-section {
+    padding: 80px 0;
+}
+
+.certificacion-item {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.certificacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certificacion-item img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.certificacion-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* ======= SECCIÓN VISIÓN Y MISIÓN ======= */
+.vision-mision-section {
+    padding: 80px 0;
+}
+
+.vision-mision-card {
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #002c5b, #1a4a7a);
+    color: white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 44, 91, 0.3);
+}
+
+.vision-mision-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 57, 70, 0.1);
+    transform: rotate(45deg);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #c40000;
+    margin-bottom: 25px;
+}
+
+.vision-mision-card h3 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.vision-mision-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.vision-mision-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #002c5b) !important;
+}
+
+.invitacion-contacto-section h2 {
+    font-weight: 700;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= ANIMACIONES Y EFECTOS ======= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-nosotros {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .nuestra-historia-section,
+    .timeline-section,
+    .valores-section,
+    .equipo-directivo-section,
+    .compromiso-ambiental-section,
+    .certificaciones-nosotros-section,
+    .vision-mision-section {
+        padding: 60px 0;
+    }
+    
+    .timeline-content,
+    .valor-card,
+    .directivo-card,
+    .certificacion-item,
+    .vision-mision-card {
+        padding: 30px 20px;
+    }
+    
+    .valor-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .directivo-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-nosotros h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-year {
+        padding: 12px 20px;
+        font-size: 1rem;
+        min-width: 100px;
+    }
+    
+    .vision-mision-card {
+        padding: 30px 25px;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+@media (prefers-reduced-motion: reduce) {
+    .historia-image img,
+    .compromiso-image img,
+    .valor-card,
+    .directivo-card,
+    .certificacion-item,
+    .timeline-content {
+        transition: none;
+    }
+    
+    .valor-card:hover,
+    .directivo-card:hover,
+    .certificacion-item:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .valor-card,
+    .directivo-card,
+    .certificacion-item,
+    .timeline-content {
+        border: 2px solid #002c5b;
+    }
+    
+    .vision-mision-card {
+        border: 2px solid white;
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;   /* Ajusta el poster sin deformarlo */
+    object-position: center;
+    border-radius: 8px;  /* opcional */
+    overflow: hidden;
+}
+
+/* Si quieres limitar la altura del poster */
+.video-wrapper {
+    max-width: 800px;    /* ajusta según tu diseño */
+    margin: 0 auto;
+}
+
+.video-wrapper video {
+    height: 100%;
+    max-height: 450px;   /* evita que se haga gigante en pantallas grandes */ 
+}

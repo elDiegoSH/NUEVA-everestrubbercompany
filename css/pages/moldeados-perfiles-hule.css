@@ -1,0 +1,414 @@
+/* moldeados-perfiles-hule.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE MOLDEADOS Y PERFILES DE HULE */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+}
+
+/* ======= FONTS ======= */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-moldeados-perfiles {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/linea-avanzada/hero-moldeados-perfiles.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-moldeados-perfiles h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-moldeados-perfiles .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= TARJETAS DE PROCESOS ======= */
+.proceso-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+    border-top: 4px solid var(--everest-blue);
+}
+
+.proceso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.proceso-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--everest-blue);
+}
+
+.proceso-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.proceso-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.lista-caracteristicas li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: var(--everest-black);
+}
+
+.lista-caracteristicas li:before {
+    content: "•";
+    color: var(--everest-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 8px;
+}
+
+/* ======= TARJETAS DE PERFILES ======= */
+.perfil-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    border-left: 4px solid var(--everest-blue);
+    transition: all 0.3s ease;
+}
+
+.perfil-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.perfil-header i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: var(--everest-blue);
+}
+
+.perfil-header h4 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.perfil-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.aplicaciones-list {
+    margin-top: 15px;
+}
+
+.aplicaciones-list .badge {
+    margin: 2px;
+    font-size: 0.75rem;
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+/* ======= TARJETAS DE MATERIALES ======= */
+.material-card {
+    background: var(--everest-white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.material-color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #e9ecef;
+}
+
+.material-color.neopreno { background-color: #2c5530; }
+.material-color.silicon { background-color: #f8f9fa; border: 2px solid #6c757d; }
+.material-color.epdm { background-color: #343a40; }
+.material-color.nitrilo { background-color: #495057; }
+.material-color.viton { background-color: #6f42c1; }
+.material-color.natural { background-color: #d4a017; }
+.material-color.butilo { background-color: #20c997; }
+.material-color.personalizado { background: linear-gradient(45deg, #002c5b, #c40000); }
+
+.material-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.material-card .small {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ======= TARJETAS DE INDUSTRIAS ======= */
+.industria-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.industria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.industria-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--everest-blue);
+}
+
+.industria-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.industria-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.industria-card li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.industria-card li:before {
+    content: "•";
+    color: var(--everest-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 8px;
+}
+
+/* ======= VENTAJAS ======= */
+.ventaja-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.ventaja-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.ventaja-content h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ventaja-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.small-word2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--everest-blue), transparent);
+    margin: 2rem 0;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-moldeados-perfiles {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-moldeados-perfiles h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-moldeados-perfiles .lead {
+        font-size: 1.2rem;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .perfil-header i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .ventaja-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ventaja-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .proceso-card, .perfil-card, .material-card, .industria-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-moldeados-perfiles h1 {
+        font-size: 1.8rem;
+    }
+    
+    .material-card {
+        margin-bottom: 15px;
+    }
+    
+    .aplicaciones-list .badge {
+        display: block;
+        margin: 5px 0;
+    }
+}

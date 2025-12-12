@@ -1,0 +1,1183 @@
+/* CSS Document */
+/* =========================
+   HERO
+========================= */
+.hero-everest {
+  background: 
+    linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.4) 0%,     /* Negro arriba */
+    rgba(0, 44, 91, 0.9) 100%),   /* Azul abajo */
+    url('../../images/fabrica-hules-industriales-bamburi.webp') center 75%/cover;
+  min-height: 65vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem 0 6rem;
+  color: #fff;
+}
+
+.hero-everest .container {
+  transform: translateY(55px);
+}
+
+.hero-everest h1,
+.hero-everest .text-white#hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.hero-everest p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.hero-everest h1 {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+
+.hero-everest p {
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+.btn-hero {
+  background: #c40000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #a00000;
+  transform: translateY(-2px);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .hero-everest {
+    height: 70vh;
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .hero-everest h1,
+  .hero-everest p {
+    text-align: center;
+  }
+  
+  .hero-everest h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* =========================
+   SECCIONES AIRBOSS (HOMEPAGE ONLY)
+========================= */
+.airboss-triple-section {
+  padding: 10px 0;
+  background: #fff;
+}
+
+.triple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 60px;
+}
+
+.triple-card {
+  position: relative;
+  text-align: center;
+  padding: 40px 40px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.triple-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 39, 66, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.triple-card:hover::before {
+  background: rgba(2, 39, 66, 0.8);
+}
+
+.triple-card:hover {
+  transform: translateY(-10px);
+}
+
+.triple-content {
+  position: relative;
+  z-index: 2;
+}
+
+.triple-card h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  transform: none;
+  display: block;
+}
+
+.triple-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.airboss-icons-section {
+  padding: 100px 0;
+  background: #f2f3f5;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.icon-card {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.icon-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon-card h4 {
+  color: #002c5b;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  transform: none;
+  display: block;
+}
+
+.icon-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.airboss-news-section {
+  padding: 40px 0px 10px 0px;
+  background: #fff;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.news-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 25px;
+}
+
+.news-date {
+  color: #c40000;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.news-content h4 {
+  color: #002c5b;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  transform: none;
+  display: block;
+}
+
+.news-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.airboss-chat-section {
+  padding: 160px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../../images/hablemos-de-tu-proyecto.webp') center/cover;
+  color: white;
+  text-align: center;
+}
+
+.chat-content {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 20px;
+  background: rgba(236, 76, 32, 0.7);
+  padding: 60px 40px;
+  border-radius: 8px;
+}
+
+.chat-content h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  transform: none;
+  display: block;
+}
+
+.chat-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* SECCIÓN COTIZACIÓN */
+.cotizacion-section {
+    background: linear-gradient(135deg, #002c5b 0%, #004085 100%);
+    color: white;
+}
+
+.cotizacion-section .section-title {
+    color: white;
+}
+
+.btn-cotizacion {
+    background: #dc3545;
+    border: 2px solid #dc3545;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-cotizacion:hover {
+    background: transparent;
+    border-color: white;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* SECCIÓN EXPORTACIONES */
+.exportaciones-section {
+    background: #f8f9fa;
+}
+
+.highlight-text {
+    color: #002c5b;
+    font-weight: 700;
+}
+
+.exportaciones-image img {
+    transition: transform 0.3s ease;
+    border: 3px solid #e9ecef;
+    border-radius: 0px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block; /* Importante para evitar espacios extra */
+}
+
+.exportaciones-image img:hover {
+    transform: scale(1.03);
+}
+
+.btn-exportacion {
+    background: #002c5b;
+    border: 2px solid #002c5b;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 44, 91, 0.3);
+}
+
+.btn-exportacion:hover {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4);
+}
+
+/* SECCIÓN COMPROMISO AMBIENTAL */
+.compromiso-ambiental {
+    padding: 60px 0;
+}
+
+.compramiso-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compramiso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.compromiso-image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.compromiso-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.compromiso-img:hover {
+    transform: scale(1.03);
+}
+
+.compramiso-text {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fondos de las triple cards */
+.card-rollos {
+  background-image: url('../../images/seccion-productos-y-servicios/rollos-de-hule-industrial.webp');
+}
+
+.card-placas {
+  background-image: url('../../images/seccion-productos-y-servicios/placas-de-hule-industrial.webp');
+}
+
+.card-apoyos {
+  background-image: url('../../images/seccion-productos-y-servicios/apoyos-para-puente.webp');
+}
+
+.card-pisos {
+  background-image: url('../../images/seccion-productos-y-servicios/pisos-para-gimnasio.webp');
+}
+
+.card-o-rings {
+  background-image: url('../../images/seccion-productos-y-servicios/o-rings-y-cordon-o-lingote.webp');
+}
+
+.card-calidad {
+  background-image: url('../../images/seccion-productos-y-servicios/ingenieria-en-compuestos.webp');
+}
+
+/* Iconos para secciones */
+.icon-image {
+  font-size: 60px;
+  color: #d50000;
+  margin-bottom: 20px;
+}
+
+.icon-card {
+  text-align: center;
+  padding: 20px;
+}
+
+/* SECCIÓN NUESTRA EMPRESA FULL WIDTH */
+.everest-company-fullwidth {
+  width: 100%;
+}
+
+.company-hero {
+  background: #ffffff;
+  color: #002c5b;
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.hero-content h1 {
+  color: #002c5b;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  color: #555;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.company-block-full {
+  width: 100%;
+}
+
+.company-block-full .row {
+  min-height: 600px;
+  margin: 0;
+}
+
+.block-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.block-image img {
+  width: 100%;
+
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.block-image:hover img {
+  transform: scale(1.05);
+}
+
+.block-content {
+  padding: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #002c5b;
+  margin-bottom: 2rem;
+  transform: none;
+}
+
+.block-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.block-content strong {
+  color: #c40000;
+  font-weight: 300;
+}
+
+.company-block-full:nth-child(even) .block-content {
+  background: #f8f9fa;
+}
+
+.company-block-full:nth-child(odd) .block-content {
+  background: #ffffff;
+}
+
+/* CENTRAR EN MÓVIL */
+@media (max-width: 768px) {
+  .chat-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 90% !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+  }
+}
+
+/* HERO RESPONSIVE PARA MÓVIL */
+@media (max-width: 768px) {
+  .hero-everest {
+    height: 70vh !important;
+    padding: 40px 0 !important;
+  }
+  
+  .hero-everest h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+    transform: none !important;
+    display: block !important;
+  }
+  
+  .hero-everest p {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-everest .container {
+    padding-top: 20px !important;
+  }
+}
+
+/* RESPONSIVE HOME SECTIONS */
+@media (max-width: 1200px) {
+  .triple-grid,
+  .icons-grid,
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .airboss-triple-section,
+  .airboss-icons-section,
+  .airboss-news-section,
+  .airboss-chat-section {
+    padding: 40px 0;
+  }
+  
+  .triple-card {
+    padding: 60px 20px;
+  }
+  
+  .compromiso-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .triple-grid,
+  .icons-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .triple-card {
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .compramiso-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-everest h1 {
+    font-size: 1.9rem !important;
+  }
+  
+  .hero-everest p {
+    font-size: 0.9rem !important;
+  }
+  
+  .btn-hero {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .btn-cotizacion,
+  .btn-exportacion {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+
+
+/* =========================
+   EFECTO COMPLETO AL HOVER DEL ARTICLE
+========================= */
+/* ===== SECCIÓN INDUSTRIAS - REIGN STYLE ===== */
+.industrias-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+/* Encabezado estilo Reign */
+.industrias-section .fs-md-5 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #002c5b;
+    line-height: 1.2;
+}
+
+.industrias-section .fs--1 {
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+}
+
+.industrias-section .hr-short {
+    width: 60px;
+    height: 2px;
+    margin: 1rem auto;
+    opacity: 1;
+}
+
+/* Tarjetas de industria */
+.industria-card {
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.industria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.industria-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.industria-image-link {
+    display: block;
+    position: relative;
+}
+
+.industria-image-link img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.industria-card:hover .industria-image-link img {
+    transform: scale(1.05);
+}
+
+/* OVERLAY SIMPLE - Sin efectos direccionales */
+.industria-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 44, 91, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.industria-card:hover .industria-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenido del overlay */
+.overlay-title {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.overlay-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.overlay-btn {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.industria-overlay:hover .overlay-btn {
+    background: white;
+    color: #002c5b;
+    gap: 0.75rem;
+}
+
+/* Contenido de la tarjeta */
+.industria-content {
+    background: white;
+    transition: all 0.3s ease;
+    height: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+}
+
+.industria-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.industria-title a {
+    color: #002c5b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.industria-title a:hover {
+    color: #c40000;
+}
+
+.industria-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.industria-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.industria-link:hover {
+    color: #c40000;
+    gap: 0.5rem;
+}
+
+.industria-link i {
+    transition: transform 0.3s ease;
+}
+
+.industria-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .industrias-section .fs-md-5 {
+        font-size: 2rem;
+    }
+    
+    .industria-image-link img {
+        height: 200px;
+    }
+    
+    .industria-overlay {
+        padding: 1rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
+
+/* ESTILOS PARA LA SECCIÓN DE OPORTUNIDADES Y ESPECIALIDADES - ESTILO PORTFOLIO */
+/* ESTILOS PARA LA SECCIÓN DE OPORTUNIDADES Y ESPECIALIDADES - TEXTO SOBRE IMAGEN */
+/* ESTILOS PARA LA SECCIÓN DE OPORTUNIDADES Y ESPECIALIDADES - TEXTO SIEMPRE VISIBLE SOBRE LA IMAGEN */
+/* ESTILOS PARA LA SECCIÓN DE OPORTUNIDADES Y ESPECIALIDADES - TEXTO SIEMPRE VISIBLE SOBRE LA IMAGEN */
+/* ESTILOS COPIADOS DE LA DEMO - SECCIÓN OPORTUNIDADES */
+/* ESTILOS COMPLETOS CORREGIDOS */
+/* ===== ESTILOS COMPLETOS Y SEGUROS PARA NEWS-CARD ===== */
+
+/* NEWS-CARD BASE */
+/* ESTILOS MODIFICADOS PARA TEXTO FIJO SOBRE IMAGEN */
+/* ESTILOS ESPECÍFICOS PARA SECCIÓN OPORTUNIDADES - TEXTO SOBRE IMAGEN */
+/* ESTILOS EXACTOS COMO LA DEMO - CON PROPORCIÓN CORRECTA 301x362 */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio-item {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.portfolio-item__content {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: #fff;
+}
+
+.portfolio-item__content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* OVERLAY AZUL AL HOVER - COMO LAS TARJETAS DE INDUSTRIAS */
+.portfolio-item__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 44, 91, 0.8); /* Azul Everest semitransparente */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.portfolio-item__content:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+.content-wrapper,
+.content-top {
+    z-index: 2;
+}
+
+/* IMAGEN CON PROPORCIÓN CORRECTA 301x362 */
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 362px;
+}
+
+.img-wrapper .item_img {
+    margin: 0;
+    position: relative;
+    height: 100%;
+}
+
+.img-wrapper .item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-item__content:hover .item_img img {
+    transform: scale(1.1);
+}
+
+/* CONTENIDO FIJO SOBRE LA IMAGEN */
+.content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 20px 20px;
+    /*background: linear-gradient(transparent, rgba(0,0,0,0.8));*/
+    color: white;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+/* CATEGORÍA ARRIBA */
+.content-top {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 3;
+}
+
+.item_category-name {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #c40000;
+    padding: 6px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.4s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.portfolio-item__content:hover .item_category-name {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+.content-middle {
+    margin-bottom: 10px;
+}
+
+.item_title {
+    margin: 0 0 10px 0;
+    transition: transform 0.4s ease 0.1s; /* Solo transform con retraso */
+}
+
+.portfolio-item__content:hover .item_title {
+    transform: translateY(-55px); /* Sube al lugar de la categoría */
+}
+
+.item_title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.20rem;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+	text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+
+.item_title a:hover {
+    color: #f8f9fa;
+}
+
+.content-bottom {
+    margin-bottom: 15px;
+}
+
+.item_introtext {
+    color: #f0f0f0;
+    font-size: 13px;
+    line-height: 1.4;
+    transition: all 0.4s ease;
+}
+
+.item_introtext p {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.item_introtext p.info {
+    color: #e0e0e0;
+    font-size: 16px;
+	font-weight: 500;
+    position: relative;
+    padding-left: 18px;
+	text-shadow: 0 2px 10px rgba(0,0,0,1.0);
+}
+
+.item_introtext p.info:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 11px;
+}
+
+.content-bottom2 {
+    text-align: left;
+    overflow: hidden;
+}
+
+/* BOTÓN SOLO TEXTO - SIN FONDO */
+.btn-info.item_more {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    padding: 8px 0;
+
+    /* SIN BORDE, SIN FONDO - SOLO TEXTO */
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    /* Animación de entrada */
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* El botón aparece de izquierda a derecha en hover */
+.portfolio-item__content:hover .btn-info.item_more {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.btn-info.item_more:after {
+    content: ' ↗';
+    font-weight: bold;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-info.item_more:hover {
+    color: #B51A2B;
+    /* SOLO CAMBIA EL COLOR - SIN FONDO */
+    background: transparent;
+    border-bottom-color: transparent;
+    transform: translateX(5px);
+}
+
+.btn-info.item_more:hover:after {
+    transform: translate(2px, -2px);
+}
+
+/* EFECTOS DE BORDE */
+.portfolio-item__content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.portfolio-item__content:hover:before {
+    border-color: #B51A2B;
+}
+
+/* LÍNEA ROJA INFERIOR */
+.img-wrapper:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #B51A2B;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.portfolio-item__content:hover .img-wrapper:after {
+    transform: scaleX(1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .portfolio-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .portfolio-item {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    
+    .img-wrapper {
+        height: 320px;
+    }
+    
+    .content-wrapper {
+        padding: 20px 15px 15px;
+    }
+    
+    .content-top {
+        left: 15px;
+        top: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .img-wrapper {
+        height: 300px;
+    }
+    
+    .content-wrapper {
+        padding: 18px 12px 12px;
+    }
+    
+    .item_title a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .img-wrapper {
+        height: 320px;
+    }
+    
+    .content-wrapper {
+        padding: 20px 15px 15px;
+    }
+}

@@ -1,0 +1,479 @@
+/* ===== SECCIÓN ROLLOS Y PLACAS - REIGN STYLE ===== */
+.rollos-placas-section {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+/* ENCABEZADO REIGN STYLE */
+.rollos-placas-section .text-center h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #002c5b;
+    line-height: 1.2;
+}
+
+.rollos-placas-section .text-justify {
+    max-width: 100%;;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* FILTROS REIGN STYLE */
+.filters-container {
+    margin: 3rem 0;
+}
+
+.filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #e9ecef;
+    color: #6c757d;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #002c5b;
+    border-color: #002c5b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* GRID REIGN STYLE - HOVERDIR EFFECT */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Estados para filtros */
+.product-card.hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.product-card.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    visibility: visible;
+    position: relative;
+    height: auto;
+    pointer-events: all;
+}
+
+
+
+/* IMAGEN CON EFECTO HOVER */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY HOVERDIR - DIRECCIONAL */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 3;
+}
+
+/* Direcciones de animación */
+.product-overlay[data-direction="left"] {
+    transform: translateX(-100%);
+}
+
+.product-overlay[data-direction="right"] {
+    transform: translateX(100%);
+}
+
+.product-overlay[data-direction="top"] {
+    transform: translateY(-100%);
+}
+
+.product-overlay[data-direction="bottom"] {
+    transform: translateY(100%);
+}
+
+.product-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0) !important;
+}
+
+/* CONTENIDO DEL OVERLAY */
+.overlay-category {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.overlay-title {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.overlay-info {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.overlay-btn {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.overlay-btn:hover {
+    background: white;
+    color: #002c5b;
+    gap: 0.75rem;
+}
+
+/* CONTENIDO NORMAL (OCULTO POR DEFECTO Y SIEMPRE) */
+.product-content {
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 2;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* El product-content permanece OCULTO incluso en hover */
+.product-card:hover .product-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilos del contenido normal (aunque esté oculto) */
+.product-category {
+    background: #e9ecef;
+    color: #c40000;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-title {
+    color: #002c5b;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.product-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product-title a:hover {
+    color: #c40000;
+}
+
+.product-info {
+    color: #6c757d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.product-btn {
+    background: #c40000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #c40000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+}
+
+.product-btn:hover {
+    background: #a00000;
+    border-color: #a00000;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* PIE DE SECCIÓN */
+.section-footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.readmore-link {
+    color: #002c5b;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.readmore-link:hover {
+    color: #c40000;
+}
+
+/* MENSAJE CUANDO NO HAY PRODUCTOS */
+.no-products-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .rollos-placas-section {
+        padding: 60px 0;
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .rollos-placas-section .text-center h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filters-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .product-content {
+        padding: 1rem;
+    }
+}
+
+/* FILTROS AL ESTILO REIGN */
+.filters-container {
+    margin: 3rem 0;
+}
+
+.filters-nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.filters-nav .nav-item {
+    margin: 0;
+}
+
+.filter-nav {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #6c757d;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border: none;
+    background: transparent;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.filter-nav:hover {
+    color: #002c5b;
+    background: transparent;
+}
+
+.filter-nav.active {
+    color: #002c5b;
+    border-bottom-color: #002c5b;
+}
+
+/* Efecto de línea inferior al estilo Reign */
+.filter-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #002c5b;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.filter-nav:hover::after {
+    width: 80%;
+}
+
+.filter-nav.active::after {
+    width: 80%;
+    background: #002c5b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .filters-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filters-nav .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .filter-nav {
+        padding: 1rem 1.5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .filter-nav {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+

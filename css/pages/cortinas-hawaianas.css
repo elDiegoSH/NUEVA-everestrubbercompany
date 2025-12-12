@@ -1,0 +1,388 @@
+/* cortinas-hawaianas.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE CORTINAS HAWAIIANAS */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+    --cortinas-color: #002c5b;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-cortinas {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/linea-avanzada/hero-moldeados-perfiles.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-cortinas h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-cortinas .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= TABLA DE PROPIEDADES ======= */
+.table-technical {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table-technical thead {
+    background: var(--everest-blue) !important;
+}
+
+.table-technical th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 15px;
+    border: none;
+}
+
+.table-technical td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-color: #dee2e6;
+}
+
+.table-technical tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-technical tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* ======= MEDIDAS DISPONIBLES ======= */
+.medidas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.medida-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--cortinas-color);
+    transition: transform 0.3s ease;
+}
+
+.medida-card:hover {
+    transform: translateY(-5px);
+}
+
+.medida-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cortinas-color);
+}
+
+.medida-card h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.medida-card p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ======= LISTAS ======= */
+.caracteristicas-cortinas ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristicas-cortinas li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.caracteristicas-cortinas li:before {
+    content: "✓";
+    color: var(--cortinas-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ======= TARJETAS DE APLICACIONES ======= */
+.aplicacion-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.aplicacion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cortinas-color);
+}
+
+.aplicacion-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.aplicacion-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.aplicaciones-especificas {
+    margin-top: 15px;
+}
+
+.aplicaciones-especificas .badge {
+    margin: 2px;
+    font-size: 0.75rem;
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+/* ======= VENTAJAS ======= */
+.ventaja-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.ventaja-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    color: var(--cortinas-color);
+}
+
+.ventaja-content h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ventaja-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======= INSTALACIÓN ======= */
+.pasos-instalacion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.paso-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--cortinas-color);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.paso-numero {
+    background: var(--cortinas-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.paso-content h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--everest-blue);
+}
+
+.paso-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-cortinas {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-cortinas h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-cortinas .lead {
+        font-size: 1.2rem;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+    
+    .medidas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .paso-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .paso-numero {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .ventaja-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ventaja-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-cortinas h1 {
+        font-size: 1.8rem;
+    }
+    
+    .table-technical th,
+    .table-technical td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .aplicaciones-especificas .badge {
+        display: block;
+        margin: 5px 0;
+    }
+}

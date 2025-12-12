@@ -1,0 +1,408 @@
+/* css/pages/rollos-placas.css */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+/* ======= HERO ROLLOS Y PLACAS ======= */
+.hero-rollos-placas {
+    background: linear-gradient(rgba(0, 44, 91, 0.5), rgba(0, 44, 91, 0.2)), 
+                url('../../images/hero-rollos-y-placas.png') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-rollos-placas .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-rollos-placas .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN INTRODUCCIÓN ======= */
+.introduccion-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.introduccion-content .lead {
+    color: #c40000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.introduccion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.introduccion-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 44, 91, 0.1), transparent);
+    z-index: 1;
+}
+
+.introduccion-image img {
+    transition: transform 0.5s ease;
+}
+
+.introduccion-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN CARACTERÍSTICAS ======= */
+.caracteristicas-section {
+    padding: 80px 0;
+}
+
+.caracteristica-card {
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 4px solid transparent;
+}
+
+.caracteristica-card:hover {
+    transform: translateY(-10px);
+    border-top-color: #c40000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.caracteristica-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+.caracteristica-card h3 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.caracteristica-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN TIPOS DE HULE ======= */
+.tipos-hule-section {
+    padding: 80px 0;
+}
+
+.tipo-hule-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.tipo-hule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tipo-hule-header {
+    background: linear-gradient(135deg, #002c5b, #1a4a7a);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.tipo-hule-header h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.tipo-hule-body {
+    padding: 25px;
+}
+
+.tipo-hule-body p {
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.tipo-hule-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tipo-hule-body li {
+    padding: 8px 0;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tipo-hule-body li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+}
+
+/* ======= SECCIÓN APLICACIONES ======= */
+.aplicaciones-section {
+    padding: 80px 0;
+}
+
+.aplicacion-card {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aplicacion-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.aplicacion-card h4 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.aplicacion-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= SECCIÓN ESPECIFICACIONES ======= */
+.especificaciones-section {
+    padding: 80px 0;
+}
+
+.especificaciones-content h3 {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.especificaciones-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.table th {
+    background-color: #002c5b;
+    color: white;
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 44, 91, 0.05);
+}
+
+/* ======= SECCIÓN CERTIFICACIONES ROLLOS ======= */
+.certificaciones-rollos-section {
+    padding: 80px 0;
+}
+
+.certificacion-item {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.certificacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certificacion-item img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.certificacion-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #002c5b) !important;
+}
+
+.invitacion-contacto-section h2 {
+    font-weight: 700;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-rollos-placas {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .introduccion-section,
+    .caracteristicas-section,
+    .tipos-hule-section,
+    .aplicaciones-section,
+    .especificaciones-section,
+    .certificaciones-rollos-section {
+        padding: 60px 0;
+    }
+    
+    .caracteristica-card,
+    .aplicacion-card,
+    .certificacion-item {
+        padding: 30px 20px;
+    }
+    
+    .caracteristica-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .aplicacion-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-rollos-placas h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .tipo-hule-body {
+        padding: 20px;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+@media (prefers-reduced-motion: reduce) {
+    .introduccion-image img,
+    .caracteristica-card,
+    .tipo-hule-card,
+    .aplicacion-card,
+    .certificacion-item {
+        transition: none;
+    }
+    
+    .caracteristica-card:hover,
+    .tipo-hule-card:hover,
+    .aplicacion-card:hover,
+    .certificacion-item:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .caracteristica-card,
+    .tipo-hule-card,
+    .aplicacion-card,
+    .certificacion-item {
+        border: 2px solid #002c5b;
+    }
+}

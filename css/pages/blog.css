@@ -1,0 +1,456 @@
+/* css/pages/blog.css */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO BLOG ======= */
+.hero-blog {
+    background: linear-gradient(rgba(0, 44, 91, 0.6), rgba(0, 44, 91, 0.3)), 
+                url('../../images/hero-blog-bg.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-blog .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-blog .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN INTRODUCCIÓN BLOG ======= */
+.introduccion-blog {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.introduccion-content .lead {
+    color: #c40000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.introduccion-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.introduccion-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 44, 91, 0.1), transparent);
+    z-index: 1;
+}
+
+.introduccion-image img {
+    transition: transform 0.5s ease;
+}
+
+.introduccion-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN ARTÍCULOS DESTACADOS ======= */
+.articulos-destacados-section {
+    padding: 80px 0;
+}
+
+.articulo-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.articulo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.articulo-destacado {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.articulo-destacado:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.articulo-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.articulo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.articulo-card:hover .articulo-image img {
+    transform: scale(1.1);
+}
+
+.articulo-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #c40000;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.articulo-content {
+    padding: 25px;
+}
+
+.articulo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.articulo-meta .fecha,
+.articulo-meta .categoria {
+    display: flex;
+    align-items: center;
+}
+
+.articulo-titulo {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.articulo-descripcion {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.articulo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-articulo {
+    background-color: #002c5b;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+}
+
+.btn-articulo:hover {
+    background-color: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.tiempo-lectura {
+    color: #888;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+/* ======= SECCIÓN TODOS LOS ARTÍCULOS ======= */
+.todos-articulos-section {
+    padding: 80px 0;
+}
+
+/* ======= PAGINACIÓN ======= */
+.pagination .page-link {
+    color: #002c5b;
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    margin: 0 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #002c5b;
+    color: white;
+    border-color: #002c5b;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #c40000;
+    border-color: #c40000;
+    color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f8f9fa;
+}
+
+/* ======= SECCIÓN CATEGORÍAS ======= */
+.categorias-blog-section {
+    padding: 80px 0;
+}
+
+.categoria-card {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.categoria-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.categoria-card h4 {
+    color: #002c5b;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.categoria-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.categoria-card .badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+/* ======= SECCIÓN NEWSLETTER ======= */
+.newsletter-section {
+    padding: 60px 0;
+    background: #002c5b!important;
+}
+
+.newsletter-section h3 {
+    font-weight: 700;
+}
+
+.newsletter-form .form-control {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form .form-control:focus {
+    box-shadow: none;
+    border-color: #c40000;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 5px 5px 0;
+    padding: 12px 25px;
+    font-weight: 600;
+    background: #c40000;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn:hover {
+    background: #c40000;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-blog {
+        min-height: 40vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .introduccion-blog,
+    .articulos-destacados-section,
+    .todos-articulos-section,
+    .categorias-blog-section {
+        padding: 60px 0;
+    }
+    
+    .articulo-content {
+        padding: 20px;
+    }
+    
+    .articulo-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .articulo-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .categoria-card {
+        padding: 25px 15px;
+    }
+    
+    .categoria-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+    
+    .newsletter-section .row {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-blog h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .articulo-titulo {
+        font-size: 1.2rem;
+    }
+    
+    .articulo-image {
+        height: 200px;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+@media (prefers-reduced-motion: reduce) {
+    .introduccion-image img,
+    .articulo-card,
+    .categoria-card {
+        transition: none;
+    }
+    
+    .articulo-card:hover,
+    .categoria-card:hover {
+        transform: none;
+    }
+    
+    .articulo-card:hover .articulo-image img {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .articulo-card,
+    .categoria-card {
+        border: 2px solid #002c5b;
+    }
+    
+    .articulo-badge {
+        border: 1px solid white;
+    }
+}
+
+/* Estilos para mejorar la legibilidad */
+.articulo-titulo {
+    font-weight: 700;
+    color: #002c5b;
+}
+
+.articulo-descripcion {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Efectos de hover mejorados */
+.articulo-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.articulo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #002c5b, #c40000);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.articulo-card:hover::before {
+    transform: scaleX(1);
+}

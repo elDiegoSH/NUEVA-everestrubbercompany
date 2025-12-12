@@ -1,0 +1,402 @@
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE TAPETE RIZO ESPAGUETI tapete-tipo-rizo-espagueti.css */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+    --everest-green: #28a745;
+    --color-rojo: #DC3545;
+    --color-azul: #007BFF;
+    --color-verde: #28A745;
+    --color-gris: #6C757D;
+    --color-negro: #212529;
+    --color-beige: #F8F9FA;
+}
+
+/* ======= FONTS ======= */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-tapete-rizo-espagueti {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/tapetes-de-hule/hero-tapete-rizo-espagueti.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-tapete-rizo-espagueti h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-tapete-rizo-espagueti .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= GUÍA DE COLORES ======= */
+.guia-colores {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px 30px;
+}
+
+.colores-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.color-muestra {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.color-rojo {
+    background-color: var(--color-rojo);
+}
+
+.color-azul {
+    background-color: var(--color-azul);
+}
+
+.color-verde {
+    background-color: var(--color-verde);
+}
+
+.color-gris {
+    background-color: var(--color-gris);
+}
+
+.color-negro {
+    background-color: var(--color-negro);
+}
+
+.color-beige {
+    background-color: var(--color-beige);
+    border: 2px solid #dee2e6;
+}
+
+.color-info h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.color-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ======= LISTAS ======= */
+.caracteristicas-tapete-rizo-espagueti ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristicas-tapete-rizo-espagueti li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.caracteristicas-tapete-rizo-espagueti li:before {
+    content: "✓";
+    color: var(--everest-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ======= INSTALACIÓN Y MANTENIMIENTO ======= */
+.instalacion-content {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.recomendacion-instalacion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.recomendacion-instalacion i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.text-green {
+    color: var(--everest-green) !important;
+}
+
+/* ======= TARJETAS DE APLICACIONES ======= */
+.aplicacion-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.aplicacion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--everest-blue);
+}
+
+.aplicacion-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.aplicacion-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ======= BENEFICIOS ======= */
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.beneficio-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.beneficio-content h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.beneficio-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======= TABLAS ======= */
+.tabla-datos {
+    margin-bottom: 2rem;
+}
+
+.tabla-datos caption {
+    font-size: 1.2rem;
+    font-weight: 600;
+    caption-side: top;
+    padding: 10px 0;
+}
+
+.tabla-datos th {
+    background-color: var(--everest-blue);
+    color: var(--everest-white);
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+}
+
+.tabla-datos td {
+    border: 1px solid #dee2e6;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.small-word2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--everest-blue), transparent);
+    margin: 2rem 0;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-tapete-rizo-espagueti {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-tapete-rizo-espagueti h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-tapete-rizo-espagueti .lead {
+        font-size: 1.2rem;
+    }
+    
+    .small-word {
+        font-size: 2rem;
+    }
+    
+    .small-word2 {
+        font-size: 1.6rem;
+    }
+    
+    .beneficio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .beneficio-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .color-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .color-muestra {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .recomendacion-instalacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .recomendacion-instalacion i {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-tapete-rizo-espagueti h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tabla-datos {
+        font-size: 0.9rem;
+    }
+    
+    .colores-grid {
+        gap: 15px;
+    }
+    
+    .color-muestra {
+        width: 60px;
+        height: 60px;
+    }
+}

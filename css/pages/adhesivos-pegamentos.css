@@ -1,0 +1,477 @@
+/* adhesivos-pegamentos.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE ADHESIVOS Y PEGAMENTOS */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+    --adhesivo-color: #8B4513;
+    --add5000-color: #2E8B57;
+    --text-green: #28a745;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-adhesivos {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/linea-avanzada/hero-moldeados-perfiles.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-adhesivos h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-adhesivos .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= TARJETAS DE PRODUCTOS ======= */
+.producto-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--everest-blue);
+}
+
+.producto-content h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--everest-blue);
+}
+
+.producto-descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--everest-black);
+}
+
+.producto-caracteristicas {
+    margin-bottom: 25px;
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.caracteristica i {
+    color: var(--everest-blue);
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.caracteristica span {
+    font-size: 0.9rem;
+    color: var(--everest-black);
+}
+
+.btn-producto {
+    background: var(--everest-blue);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-producto:hover {
+    background: var(--everest-red);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN DETALLE PRODUCTOS ======= */
+.detalle-producto {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.especificaciones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.especificacion {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.materiales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.material-item {
+    display: flex;
+    align-items: center;
+}
+
+.material-item i {
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+
+.material-item span {
+    font-size: 0.9rem;
+}
+
+.text-green {
+    color: var(--text-green) !important;
+}
+
+/* ======= APLICACIONES GRID ======= */
+.aplicaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.aplicacion-item {
+    text-align: center;
+    padding: 20px 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.aplicacion-item:hover {
+    transform: translateY(-3px);
+}
+
+.aplicacion-item i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--everest-blue);
+}
+
+.aplicacion-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ======= MODO DE USO ======= */
+.pasos-uso {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.paso-item {
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--everest-blue);
+}
+
+.paso-numero {
+    background: var(--everest-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.paso-content h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--everest-blue);
+}
+
+.paso-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ======= SEGURIDAD ======= */
+.seguridad-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.seguridad-card.alerta {
+    border-left: 4px solid var(--everest-red);
+}
+
+.seguridad-card.proteccion {
+    border-left: 4px solid var(--everest-blue);
+}
+
+.seguridad-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.seguridad-header i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+.seguridad-card.alerta .seguridad-header i {
+    color: var(--everest-red);
+}
+
+.seguridad-card.proteccion .seguridad-header i {
+    color: var(--everest-blue);
+}
+
+.seguridad-header h4 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.seguridad-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.seguridad-card li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.seguridad-card.alerta li:before {
+    content: "⚠";
+    position: absolute;
+    left: 0;
+    color: var(--everest-red);
+}
+
+.seguridad-card.proteccion li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--everest-blue);
+    font-weight: bold;
+}
+
+/* ======= NFPA CARD ======= */
+.nfpa-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid var(--everest-blue);
+}
+
+.nfpa-codigos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.nfpa-item {
+    text-align: center;
+}
+
+.nfpa-valor {
+    width: 50px;
+    height: 50px;
+    background: var(--everest-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 auto 8px;
+}
+
+.nfpa-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--everest-black);
+}
+
+.nfpa-proteccion {
+    font-weight: 600;
+    color: var(--everest-blue);
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-adhesivos {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-adhesivos h1 {
+        font-size: 2.2rem;
+    }
+    
+    .producto-card {
+        padding: 20px;
+    }
+    
+    .especificaciones-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .materiales-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .aplicaciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .paso-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .paso-numero {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .nfpa-codigos {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-adhesivos h1 {
+        font-size: 1.8rem;
+    }
+    
+    .aplicaciones-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    .producto-card .row {
+        flex-direction: column;
+    }
+    
+    .producto-imagen {
+        margin-bottom: 20px;
+    }
+}

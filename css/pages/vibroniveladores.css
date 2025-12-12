@@ -1,0 +1,430 @@
+/* vibroniveladores.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE VIBRONIVELADORES */
+
+/* ======= VARIABLES DE COLOR ======= */
+:root {
+    --everest-blue: #002c5b;
+    --everest-red: #c40000;
+    --everest-white: #ffffff;
+    --everest-black: #000000;
+}
+
+/* ======= FONTS ======= */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-vibroniveladores {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/linea-avanzada/hero-moldeados-perfiles.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-vibroniveladores h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-vibroniveladores .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= SECCIÓN CARACTERÍSTICAS PRINCIPALES ======= */
+.caracteristicas-vibroniveladores {
+    position: relative;
+}
+
+.caracteristicas-vibroniveladores ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristicas-vibroniveladores li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.caracteristicas-vibroniveladores li:before {
+    content: "✓";
+    color: var(--everest-blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.item-imageimg-intro__left {
+    margin-bottom: 0;
+}
+
+.item_introtext.mobile-padding {
+    padding-left: 0;
+}
+
+/* ======= BENEFICIOS ======= */
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.beneficio-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    color: var(--everest-blue);
+}
+
+.beneficio-content h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--everest-blue);
+}
+
+.beneficio-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--everest-black);
+}
+
+/* ======= TABLAS ======= */
+.table-technical {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table-technical thead th {
+    background-color: var(--everest-blue) !important;
+    color: var(--everest-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 15px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-technical tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-color: #dee2e6;
+    text-align: center;
+}
+
+.table-technical tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-technical tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+/* ======= CARACTERÍSTICAS ADICIONALES ======= */
+.caracteristica-adicional {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    border-left: 4px solid var(--everest-blue);
+}
+
+.caracteristica-adicional h4 {
+    font-weight: 600;
+    color: var(--everest-blue);
+}
+
+.caracteristicas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.caracteristica-item {
+    display: flex;
+    align-items: center;
+}
+
+.caracteristica-item i {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.caracteristica-item span {
+    font-size: 0.9rem;
+    color: var(--everest-black);
+}
+
+/* ======= TARJETAS DE APLICACIONES ======= */
+.aplicacion-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.aplicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.aplicacion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--everest-blue);
+}
+
+.aplicacion-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--everest-blue);
+}
+
+.aplicacion-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--everest-black);
+}
+
+.aplicaciones-especificas {
+    margin-top: 15px;
+}
+
+.aplicaciones-especificas .badge {
+    margin: 2px;
+    font-size: 0.75rem;
+    background-color: var(--everest-blue) !important;
+    color: white;
+}
+
+/* ======= INSTALACIÓN ======= */
+.pasos-instalacion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.paso-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--everest-blue);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.paso-numero {
+    background: var(--everest-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.paso-content h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--everest-blue);
+}
+
+.paso-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--everest-black);
+}
+
+/* ======= SECCIONES GENERALES ======= */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    color: var(--everest-blue);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--everest-red);
+}
+
+.bg-blue {
+    background-color: var(--everest-blue) !important;
+}
+
+.text-blue {
+    color: var(--everest-blue) !important;
+}
+
+.text-red {
+    color: var(--everest-red) !important;
+}
+
+.text-white {
+    color: var(--everest-white) !important;
+}
+
+.text-black {
+    color: var(--everest-black) !important;
+}
+
+.small-word {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--everest-blue);
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    background-color: var(--everest-blue) !important;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: var(--everest-blue);
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: var(--everest-red);
+    color: white;
+    transform: translateY(-2px);
+    border-color: var(--everest-red);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-vibroniveladores {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-vibroniveladores h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-vibroniveladores .lead {
+        font-size: 1.2rem;
+    }
+    
+    .small-word {
+        font-size: 1.8rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+    
+    .item_introtext.mobile-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .caracteristicas-vibroniveladores .row {
+        text-align: center;
+    }
+    
+    .caracteristicas-vibroniveladores ul {
+        text-align: left;
+    }
+    
+    .paso-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .paso-numero {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .beneficio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .beneficio-item i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .caracteristica-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-vibroniveladores h1 {
+        font-size: 1.8rem;
+    }
+    
+    .table-technical {
+        font-size: 0.8rem;
+    }
+    
+    .aplicaciones-especificas .badge {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .caracteristica-adicional {
+        padding: 20px 15px;
+    }
+}

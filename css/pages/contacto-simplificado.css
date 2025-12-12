@@ -1,0 +1,408 @@
+/* css/pages/contacto-simplificado.css */
+
+.contacto-simplificado-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.formulario-simplificado-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 44, 91, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.section-title-simplificado {
+    color: #002c5b;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title-simplificado::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #c40000, #002c5b);
+    border-radius: 2px;
+}
+
+.form-label-simplificado {
+    font-weight: 700;
+    color: #002c5b;
+    margin-bottom: 0.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    display: block;
+}
+
+.form-control-simplificado {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control-simplificado:focus {
+    border-color: #002c5b;
+    box-shadow: 0 0 0 0.3rem rgba(0, 44, 91, 0.15);
+    background: white;
+    transform: translateY(-2px);
+}
+
+.form-control-simplificado.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.3rem rgba(220, 53, 69, 0.15);
+}
+
+.form-control-simplificado.is-valid {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.3rem rgba(25, 135, 84, 0.15);
+}
+
+/* Verificación de seguridad */
+.security-verification-simplificado {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid #002c5b;
+    margin-bottom: 1.5rem;
+}
+
+.security-verification-simplificado p {
+    margin-bottom: 1rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.math-question-simplificado {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #002c5b;
+    min-width: 140px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.math-answer-input {
+    max-width: 140px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+/* Checkbox de privacidad */
+.form-check-simplificado {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    margin: 2rem 0;
+}
+
+.form-check-input-simplificado {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    float: left;
+}
+
+.form-check-input-simplificado:checked {
+    background-color: #002c5b;
+    border-color: #002c5b;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input-simplificado:focus {
+    box-shadow: 0 0 0 0.3rem rgba(0, 44, 91, 0.25);
+    border-color: #002c5b;
+}
+
+.form-check-label-simplificado {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: block;
+    margin-left: 2.5rem;
+}
+
+.privacy-link {
+    color: #002c5b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #c40000;
+    text-decoration: underline;
+}
+
+/* Botón de enviar */
+.btn-enviar-simplificado {
+    background: linear-gradient(135deg, #002c5b 0%, #004085 100%);
+    color: white;
+    padding: 1.25rem 4rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 44, 91, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-enviar-simplificado:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 44, 91, 0.4);
+    background: linear-gradient(135deg, #004085 0%, #002c5b 100%);
+}
+
+.btn-enviar-simplificado:active {
+    transform: translateY(-1px);
+}
+
+.btn-enviar-simplificado:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 15px;
+    border: none;
+    padding: 1.5rem 2rem;
+    border-left: 5px solid transparent;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border-left-color: #28a745;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%);
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+
+.alert i {
+    font-size: 1.5rem;
+}
+
+/* Animaciones */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Mejoras de espaciado y alineación */
+.form-group-simplificado {
+    margin-bottom: 2rem;
+}
+
+.text-center .lead {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-simplificado-section {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .formulario-simplificado-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        border-radius: 15px;
+    }
+    
+    .section-title-simplificado {
+        font-size: 2rem;
+    }
+    
+    .security-verification-simplificado {
+        padding: 1.25rem;
+    }
+    
+    .math-question-simplificado {
+        min-width: 120px;
+        font-size: 1.1rem;
+        padding: 0.875rem 1.25rem;
+    }
+    
+    .math-answer-input {
+        max-width: 120px;
+        padding: 0.875rem;
+    }
+    
+    .btn-enviar-simplificado {
+        padding: 1.1rem 3rem;
+        font-size: 1.1rem;
+        min-width: 220px;
+    }
+    
+    .form-check-simplificado {
+        padding: 1.25rem;
+        margin: 1.5rem 0;
+    }
+    
+    .alert {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .formulario-simplificado-card {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .section-title-simplificado {
+        font-size: 1.75rem;
+    }
+    
+    .section-title-simplificado::after {
+        width: 80px;
+        bottom: -12px;
+    }
+    
+    .security-verification-simplificado .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem !important;
+    }
+    
+    .math-answer-input {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .math-question-simplificado {
+        min-width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn-enviar-simplificado {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        min-width: 200px;
+        width: 100%;
+    }
+    
+    .form-check-label-simplificado {
+        font-size: 0.9rem;
+        margin-left: 2rem;
+    }
+    
+    .form-check-input-simplificado {
+        margin-right: 0.75rem;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .form-control-simplificado {
+        border-width: 3px;
+    }
+    
+    .formulario-simplificado-card {
+        border: 3px solid #002c5b;
+    }
+    
+    .security-verification-simplificado {
+        border-left-width: 6px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .form-control-simplificado,
+    .btn-enviar-simplificado {
+        transition: none;
+    }
+    
+    .btn-enviar-simplificado:hover {
+        transform: none;
+    }
+    
+    .shake,
+    .pulse {
+        animation: none;
+    }
+}
+
+/* Estados de carga mejorados */
+.btn-loading .spinner-border {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-width: 2px;
+}
+
+/* Placeholders mejorados */
+.form-control-simplificado::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Focus states para accesibilidad */
+.form-control-simplificado:focus-visible {
+    outline: 3px solid #002c5b;
+    outline-offset: 2px;
+}
+
+.btn-enviar-simplificado:focus-visible {
+    outline: 3px solid #002c5b;
+    outline-offset: 3px;
+}

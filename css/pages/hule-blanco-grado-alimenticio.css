@@ -1,0 +1,181 @@
+/* hule-blanco-grado-alimenticio.css */
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE HULE BLANCO GRADO ALIMENTICIO */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-hule-blanco {
+    background: linear-gradient(rgba(0, 44, 91, 0.3), rgba(0, 44, 91, 0.5)), 
+                url('../../images/hule-faldon/hero-rollos-y-placas.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+}
+
+.hero-hule-blanco h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-hule-blanco .lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* BOTÓN HERO IGUAL AL EJEMPLO */
+.btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    border: 2px solid #c40000;
+}
+
+/* ======= TARJETAS DE PRODUCTOS (MISMO ESTILO QUE TIPOS DE EMPAQUES) ======= */
+.empaque-card {
+    background: var(--everest-white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e9ecef;
+}
+
+.empaque-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.empaque-card h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.empaque-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.empaque-card ul {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding-left: 1rem;
+}
+
+.empaque-card ul li {
+    margin-bottom: 5px;
+}
+
+/* ======= TARJETAS DE INDUSTRIAS ======= */
+.industria-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.industria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.industria-card h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.industria-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ======= BOTÓN OUTLINE PRIMARY (IGUAL AL EJEMPLO) ======= */
+.btn-outline-primary {
+    border-color: var(--everest-blue);
+    color: var(--everest-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--everest-red);
+    border-color: var(--everest-blue);
+    color: var(--everest-white);
+}
+
+/* ======= SECCIÓN INVITACIÓN A CONTACTO ======= */
+.invitacion-contacto-section {
+    padding: 60px 0;
+    background: #002c5b !important;
+}
+
+.invitacion-contacto-section h2 {
+    font-weight: 700;
+}
+
+.invitacion-contacto-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.invitacion-contacto-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .hero-hule-blanco {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-hule-blanco h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-hule-blanco .lead {
+        font-size: 1.2rem;
+    }
+    
+    .empaque-card {
+        margin-bottom: 20px;
+    }
+    
+    .empaque-card .row {
+        text-align: center;
+    }
+    
+    .empaque-card .col-md-4 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-hule-blanco h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,770 @@
+/* css/pages/ingenieria-compuestos.css */
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* ======= HERO INGENIERÍA EN COMPUESTOS ======= */
+.hero-ingenieria {
+    background: linear-gradient(rgba(0, 44, 91, 0.5), rgba(0, 44, 91, 0.2)), 
+                url('../../images/hero-ingenieria-compuestos-bg.png') center/cover no-repeat;
+    min-height: 60vh;
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+.hero-ingenieria .btn-hero {
+    background-color: #c40000;
+    border: 2px solid #c40000;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.hero-ingenieria .btn-hero:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN MAQUILADOS DE ELASTÓMEROS ======= */
+.maquilados-section {
+    padding: 80px 0;
+}
+
+.page_header {
+    margin-bottom: 2rem;
+}
+
+.page_header h1,
+.page_header h2,
+.page_header h3 {
+    color: #002c5b;
+    font-weight: 700;
+}
+
+.small-word {
+    color: #002c5b;
+    font-weight: 600;
+}
+
+.small-word3 {
+    color: #002c5b;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.small-word4 {
+    color: #002c5b;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.text-azul {
+    color: #002c5b !important;
+}
+
+.text-rojo2 {
+    color: #c40000 !important;
+}
+
+/* ======= SECCIÓN HULE SIN VULCANIZAR ======= */
+.hule-crudo-section {
+    padding: 80px 0;
+}
+
+.hule-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hule-image img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hule-image:hover img {
+    transform: scale(1.05);
+}
+
+.hule-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.ventajas-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.ventajas-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.ventajas-list li:last-child {
+    border-bottom: none;
+}
+
+.ventajas-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ======= SECCIÓN SERVICIOS DE INGENIERÍA ======= */
+.servicios-ingenieria-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: #002c5b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #c40000;
+}
+
+.servicio-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 44, 91, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.servicio-card:hover::before {
+    left: 100%;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    border-top-color: #c40000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+.servicio-card h3 {
+    color: #002c5b;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.servicio-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.servicio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servicio-list li {
+    padding: 8px 0;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.servicio-list li:last-child {
+    border-bottom: none;
+}
+
+.servicio-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+}
+
+/* ======= SECCIÓN USOS Y APLICACIONES ======= */
+.aplicaciones-section {
+    padding: 80px 0;
+}
+
+.aplicaciones-detalle p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.aplicaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.aplicacion-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #002c5b;
+    transition: all 0.3s ease;
+}
+
+.aplicacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aplicacion-item h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.aplicacion-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ======= SECCIÓN PROCESOS DE MAQUILA ======= */
+.procesos-section {
+    padding: 80px 0;
+}
+
+.procesos-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.presentaciones-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.presentaciones-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.presentaciones-list li:last-child {
+    border-bottom: none;
+}
+
+.presentaciones-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #c40000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.procesos-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.procesos-image img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.procesos-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ======= SECCIÓN DESARROLLO Y ASESORÍA ======= */
+.desarrollo-section {
+    padding: 80px 0;
+}
+
+.desarrollo-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.desarrollo-image img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.desarrollo-image:hover img {
+    transform: scale(1.05);
+}
+
+.desarrollo-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* ======= SECCIÓN INDUSTRIAS ======= */
+.industrias-section {
+    padding: 80px 0;
+}
+
+.industrias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.industria-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.industria-item:hover {
+    transform: translateY(-5px);
+    border-top-color: #c40000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.industria-item h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+.industria-item p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ======= SECCIÓN VENTAJAS EVEREST ======= */
+.ventajas-section {
+    padding: 80px 0;
+}
+
+.ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ventaja-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.ventaja-item:hover {
+    transform: translateY(-5px);
+    border-top-color: #c40000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ventaja-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #002c5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.ventaja-item h4 {
+    color: #002c5b;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.ventaja-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ======= SECCIÓN COTIZACIÓN ======= */
+.cotizacion-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #002c5b) !important;
+}
+
+.cotizacion-section h2 {
+    font-weight: 700;
+    color: white;
+}
+
+.cotizacion-section .lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+.cotizacion-section .btn-light {
+    background: white;
+    color: #002c5b;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cotizacion-section .btn-light:hover {
+    background: #c40000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ======= SECCIÓN FAQ ======= */
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-intro {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.faq-intro p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.accordion-item {
+    border: 1px solid #e9ecef;
+    border-radius: 8px !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: white;
+    color: #002c5b;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 20px 25px;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #002c5b;
+    color: white;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23002c5b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    padding: 25px;
+    background: #f8f9fa;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+    padding-left: 25px;
+}
+
+.faq-list li:last-child {
+    border-bottom: none;
+}
+
+.faq-list li::before {
+    content: '•';
+    position: absolute;
+    left: 10px;
+    color: #c40000;
+    font-weight: bold;
+}
+
+/* ======= ANIMACIONES Y EFECTOS ======= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .hero-ingenieria {
+        min-height: 50vh;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .maquilados-section,
+    .hule-crudo-section,
+    .servicios-ingenieria-section,
+    .aplicaciones-section,
+    .procesos-section,
+    .desarrollo-section,
+    .industrias-section,
+    .ventajas-section,
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .servicio-card,
+    .aplicacion-item,
+    .industria-item,
+    .ventaja-item {
+        padding: 30px 20px;
+    }
+    
+    .servicio-icon,
+    .ventaja-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .aplicaciones-grid,
+    .industrias-grid,
+    .ventajas-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .small-word3 {
+        font-size: 1.5rem;
+    }
+    
+    .small-word4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-ingenieria h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .servicio-card,
+    .aplicacion-item,
+    .industria-item,
+    .ventaja-item {
+        padding: 25px 15px;
+    }
+    
+    .accordion-button {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 20px;
+    }
+}
+
+/* ======= ACCESIBILIDAD ======= */
+@media (prefers-reduced-motion: reduce) {
+    .hule-image img,
+    .procesos-image img,
+    .desarrollo-image img,
+    .servicio-card,
+    .aplicacion-item,
+    .industria-item,
+    .ventaja-item {
+        transition: none;
+    }
+    
+    .servicio-card:hover,
+    .aplicacion-item:hover,
+    .industria-item:hover,
+    .ventaja-item:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .servicio-card,
+    .aplicacion-item,
+    .industria-item,
+    .ventaja-item {
+        border: 2px solid #002c5b;
+    }
+    
+    .ventajas-list li::before,
+    .presentaciones-list li::before,
+    .faq-list li::before {
+        color: #002c5b;
+    }
+}
+
+/* ======= ESTILOS ESPECÍFICOS PARA CONTENIDO EXISTENTE ======= */
+.item_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.mobile-padding {
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .mobile-padding {
+        padding: 0;
+    }
+}
+
+/* Estilos para listas existentes */
+.list2 {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list2 li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+.list2 li:before {
+    content: "•";
+    color: #c40000;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+}
+
+/* Separadores */
+.separator {
+    height: 1px;
+    background: #dee2e6;
+    margin: 3rem 0;
+}
+
+.mb-4-custom {
+    margin-bottom: 2.5rem !important;
+}
