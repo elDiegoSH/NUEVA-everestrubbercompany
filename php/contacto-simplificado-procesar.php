@@ -3,7 +3,7 @@
 
 // Configuración
 $destinatario = "ventas@grupoeverest.com.mx";
-$asunto_base = "Contacto desde Web Grupo Everest";
+$asunto_base = "Contact from EVEREST® Group Website";
 
 // Headers para el email
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -41,7 +41,7 @@ try {
     
     // Verificar honeypot (campo anti-spam)
     if (!empty($_POST['website'])) {
-        throw new Exception('Solicitud detectada como spam');
+        throw new Exception('Request detected as spam');
     }
     
     // Obtener y validar datos del formulario
@@ -53,17 +53,17 @@ try {
     
     // Validar campos requeridos
     if (empty($nombre) || empty($email) || empty($telefono) || empty($mensaje) || empty($math_answer)) {
-        throw new Exception('Todos los campos marcados con * son obligatorios');
+        throw new Exception('All fields marked with * are required');
     }
     
     // Validar email
     if (!validarEmail($email)) {
-        throw new Exception('El correo electrónico no es válido');
+        throw new Exception('The email address is not valid');
     }
     
     // Validar longitud del mensaje
     if (strlen($mensaje) < 20) {
-        throw new Exception('El mensaje debe tener al menos 20 caracteres');
+        throw new Exception('The message must be at least 20 characters long');
     }
     
     // Construir el cuerpo del email
@@ -81,21 +81,10 @@ try {
         </style>
     </head>
     <body>
-<!-- Start of LiveChat (www.livechatinc.com) code -->
-<script type="text/javascript">
-var __lc = {};
-__lc.license = 6683241;
-(function() {
-  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-})();
-</script>
-<!-- End of LiveChat code -->
         <div class='container'>
             <div class='header'>
-                <h2>Nuevo Mensaje de Contacto</h2>
-                <p>Grupo Everest</p>
+                <h2>New Contact Message</h2>
+                <p>Everest Group</p>
             </div>
             <div class='content'>
                 <div class='field'>
@@ -119,7 +108,7 @@ __lc.license = 6683241;
                 </div>
             </div>
             <div class='footer'>
-                Este mensaje fue enviado desde el formulario de contacto del website de Grupo Everest.
+                This message was sent from the contact form on the EVEREST® Group website.
             </div>
         </div>
     </body>
@@ -132,14 +121,14 @@ __lc.license = 6683241;
     // Enviar email
     if (mail($destinatario, $asunto_email, $cuerpo_email, $headers)) {
         $respuesta['success'] = true;
-        $respuesta['message'] = 'Mensaje enviado correctamente. Te contactaremos pronto.';
+        $respuesta['message'] = 'Message sent successfully. We will contact you soon.';
         
         // Log del mensaje (opcional)
         $log_message = date('Y-m-d H:i:s') . " - Contacto Simplificado de {$nombre} ({$email})\n";
         file_put_contents('../logs/contactos-simplificados.log', $log_message, FILE_APPEND | LOCK_EX);
         
     } else {
-        throw new Exception('Error al enviar el mensaje. Por favor intenta nuevamente.');
+        throw new Exception('Error sending message. Please try again.');
     }
     
 } catch (Exception $e) {
