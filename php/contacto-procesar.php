@@ -3,7 +3,7 @@
 
 // Configuración
 $destinatario = "ventas@grupoeverest.com.mx";
-$asunto_base = "Contacto desde Web Grupo Everest";
+$asunto_base = "Contact from EVEREST® Group Website";
 
 // Headers para el email
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -79,17 +79,17 @@ try {
     
     // Validar campos requeridos
     if (empty($nombre) || empty($email) || empty($telefono) || empty($asunto_tipo) || empty($mensaje)) {
-        throw new Exception('Todos los campos marcados con * son obligatorios');
+        throw new Exception('All fields marked with * are required');
     }
     
     // Validar email
     if (!validarEmail($email)) {
-        throw new Exception('El correo electrónico no es válido');
+        throw new Exception('The email address is not valid');
     }
     
     // Validar longitud del mensaje
     if (strlen($mensaje) < 20) {
-        throw new Exception('El mensaje debe tener al menos 20 caracteres');
+        throw new Exception('The message must be at least 20 characters long');
     }
     
     // Mapear asuntos
@@ -135,17 +135,6 @@ try {
         </style>
     </head>
     <body>
-<!-- Start of LiveChat (www.livechatinc.com) code -->
-<script type="text/javascript">
-var __lc = {};
-__lc.license = 6683241;
-(function() {
-  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-})();
-</script>
-<!-- End of LiveChat code -->
         <div class='container'>
             <div class='header'>
                 <h2>Nuevo Mensaje de Contacto</h2>
@@ -182,7 +171,7 @@ __lc.license = 6683241;
                 </div>
             </div>
             <div class='footer'>
-                Este mensaje fue enviado desde el formulario de contacto del website de Grupo Everest.
+                This message was sent from the contact form on the EVEREST® Group website.
             </div>
         </div>
     </body>
@@ -202,7 +191,7 @@ __lc.license = 6683241;
         file_put_contents('../logs/contactos.log', $log_message, FILE_APPEND | LOCK_EX);
         
     } else {
-        throw new Exception('Error al enviar el mensaje. Por favor intenta nuevamente.');
+        throw new Exception('Error sending message. Please try again.');
     }
     
 } catch (Exception $e) {
