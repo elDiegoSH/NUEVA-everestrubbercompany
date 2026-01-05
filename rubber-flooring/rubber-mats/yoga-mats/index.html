@@ -115,13 +115,39 @@ function escribe_enlace_correo() {
 <body>
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
-var __lc = {};
-__lc.license = 6683241;
-(function() {
-  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-})();
+// Widget LiveChat con carga inteligente
+function loadLiveChat() {
+    // Solo cargar si el usuario está activo
+    if (document.visibilityState === 'visible') {
+        window.__lc = window.__lc || {};
+        window.__lc.license = 6683241; 
+        
+        // Configuración mínima
+        window.__lc.params = [
+            {name: 'Product', value: 'Rubber Products'},
+            {name: 'Page', value: window.location.pathname}
+        ];
+        
+        // Cargar script
+        var lc = document.createElement('script');
+        lc.src = 'https://cdn.livechatinc.com/tracking.js';
+        lc.async = true;
+        document.head.appendChild(lc);
+        
+        console.log('LiveChat cargado bajo demanda');
+    }
+}
+
+// Cargar después de interacción o tiempo
+setTimeout(loadLiveChat, 10000); // 10 segundos
+
+// O al hacer scroll
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) {
+        loadLiveChat();
+        window.removeEventListener('scroll', arguments.callee);
+    }
+}, {once: true});
 </script>
 <!-- End of LiveChat code -->
 <!-- ======= IMPROVED TOP BAR ======= -->

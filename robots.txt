@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Bloqueos básicos (si aplican)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/  # Solo si usas WordPress
+
+# Sitemap principal
+Sitemap: https://everestrubbercompany.com/sitemap.xml
+
+# Sitemaps adicionales (opcional futuro)
+# Sitemap: https://everestrubbercompany.com/sitemap-images.xml
+# Sitemap: https://everestrubbercompany.com/sitemap-videos.xml

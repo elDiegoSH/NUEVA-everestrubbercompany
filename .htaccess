@@ -1,162 +1,86 @@
-Options +FollowSymlinks
-RewriteEngine on
+# ============================================
+# EVEREST RUBBER COMPANY - .HTACCESS OPTIMIZADO
+# Optimizado para SEO, velocidad y seguridad
+# ============================================
 
-<IfModule mod_rewrite.c>
+# Activar motor de reescritura
+RewriteEngine On
+Options +FollowSymLinks -Indexes
+
+# ============================================
+# 1. REDIRECCIONES Y HTTPS
+# ============================================
+
+# Redirigir HTTP a HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,NE]
+
+# Redirigir dominio antiguo al nuevo
 RewriteCond %{HTTP_HOST} ^grupoeverest\.com\.mx$ [NC]
 RewriteRule ^(.*)$ https://everestrubbercompany.com/$1 [R=301,L]
-</IfModule>
 
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-Header always set Content-Security-Policy "upgrade-insecure-requests;"
+# Redirigir www a non-www (si es necesario)
+# RewriteCond %{HTTP_HOST} ^www\.everestrubbercompany\.com$ [NC]
+# RewriteRule ^(.*)$ https://everestrubbercompany.com/$1 [R=301,L]
 
-ErrorDocument 404 /paginadeerror/index.php
-
-<IfModule mod_gzip.c>
-mod_gzip_on Yes
-mod_gzip_dechunk Yes
-mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
-mod_gzip_item_include handler ^cgi-script$
-mod_gzip_item_include mime ^text/.*
-mod_gzip_item_include mime ^application/x-javascript.*
-mod_gzip_item_exclude mime ^image/.*
-mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
-</IfModule>
- 
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/xml application/xhtml+xml application/rss+xml application/x-httpd-php application/x-httpd-fastphp image/svg+xml
-</IfModule>
-
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresDefault "access plus 1 week"
-</IfModule>
-
-<IfModule mod_mime.c>
-    AddType text/css .css
-    AddType text/x-component .htc
-    AddType application/x-javascript .js
-    AddType application/javascript .js2
-    AddType text/javascript .js3
-    AddType text/x-js .js4
-    AddType text/html .html .htm
-    AddType text/richtext .rtf .rtx
-    AddType image/svg+xml .svg .svgz
-    AddType text/plain .txt
-    AddType text/xsd .xsd
-    AddType text/xsl .xsl
-    AddType text/xml .xml
-    AddType video/asf .asf .asx .wax .wmv .wmx
-    AddType video/avi .avi
-    AddType image/bmp .bmp
-    AddType application/java .class
-    AddType video/divx .divx
-    AddType application/msword .doc .docx
-    AddType application/vnd.ms-fontobject .eot
-    AddType application/x-msdownload .exe
-    AddType image/gif .gif
-    AddType application/x-gzip .gz .gzip
-    AddType image/x-icon .ico
-    AddType image/jpeg .jpg .jpeg .jpe
-	AddType image/webp .webp
-    AddType application/json .json
-    AddType application/vnd.ms-access .mdb
-    AddType audio/midi .mid .midi
-    AddType video/quicktime .mov .qt
-    AddType audio/mpeg .mp3 .m4a
-    AddType video/mp4 .mp4 .m4v
-    AddType video/mpeg .mpeg .mpg .mpe
-    AddType application/vnd.ms-project .mpp
-    AddType application/x-font-otf .otf
-    AddType application/vnd.ms-opentype ._otf
-    AddType application/vnd.oasis.opendocument.database .odb
-    AddType application/vnd.oasis.opendocument.chart .odc
-    AddType application/vnd.oasis.opendocument.formula .odf
-    AddType application/vnd.oasis.opendocument.graphics .odg
-    AddType application/vnd.oasis.opendocument.presentation .odp
-    AddType application/vnd.oasis.opendocument.spreadsheet .ods
-    AddType application/vnd.oasis.opendocument.text .odt
-    AddType audio/ogg .ogg
-    AddType application/pdf .pdf
-    AddType image/png .png
-    AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
-    AddType audio/x-realaudio .ra .ram
-    AddType application/x-shockwave-flash .swf
-    AddType application/x-tar .tar
-    AddType image/tiff .tif .tiff
-    AddType application/x-font-ttf .ttf .ttc
-    AddType application/vnd.ms-opentype ._ttf
-    AddType audio/wav .wav
-    AddType audio/wma .wma
-    AddType application/vnd.ms-write .wri
-    AddType application/font-woff .woff
-    AddType application/font-woff2 .woff2
-    AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
-    AddType application/zip .zip
-</IfModule>
-
-<IfModule mod_expires.c>
-    ExpiresActive On
-    
-    # Imágenes - 1 año
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/bmp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType image/tiff "access plus 1 year"
-    
-    # Fuentes - 1 año
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType application/x-font-ttf "access plus 1 year"
-    ExpiresByType application/x-font-otf "access plus 1 year"
-    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
-    
-    # CSS y JavaScript - 1 mes
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType application/x-javascript "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
-    
-    # PDF y documentos - 1 mes
-    ExpiresByType application/pdf "access plus 1 month"
-    ExpiresByType application/msword "access plus 1 month"
-    ExpiresByType application/vnd.ms-powerpoint "access plus 1 month"
-    ExpiresByType application/vnd.ms-excel "access plus 1 month"
-    
-    # Archivos de medios - 1 año
-    ExpiresByType video/mp4 "access plus 1 year"
-    ExpiresByType video/mpeg "access plus 1 year"
-    ExpiresByType audio/mpeg "access plus 1 year"
-    ExpiresByType audio/wav "access plus 1 year"
-    
-    # HTML - 1 hora (cache corto para contenido dinámico)
-    ExpiresByType text/html "access plus 1 hour"
-    
-    # Por defecto - 1 semana
-    ExpiresDefault "access plus 1 week"
-</IfModule>
+# ============================================
+# 2. COMPRESIÓN (GZIP/BROTLI)
+# ============================================
 
 <IfModule mod_deflate.c>
-    <IfModule mod_headers.c>
-        Header append Vary User-Agent env=!dont-vary
-    </IfModule>
-    AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/bmp application/java application/msword application/vnd.ms-fontobject application/x-msdownload image/x-icon application/json application/vnd.ms-access application/vnd.ms-project application/x-font-otf application/vnd.ms-opentype application/vnd.oasis.opendocument.database application/vnd.oasis.opendocument.chart application/vnd.oasis.opendocument.formula application/vnd.oasis.opendocument.graphics application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.text audio/ogg application/pdf application/vnd.ms-powerpoint application/x-shockwave-flash image/tiff application/x-font-ttf application/vnd.ms-opentype audio/wav application/vnd.ms-write application/font-woff application/font-woff2 application/vnd.ms-excel
-    <IfModule mod_mime.c>
-        # DEFLATE by extension
-        AddOutputFilter DEFLATE js css htm html xml
-    </IfModule>
+    # Habilitar compresión
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    
+    # Excluir navegadores antiguos
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
-# Headers de seguridad y caché optimizados
+# ============================================
+# 3. CABECERAS DE SEGURIDAD (CRÍTICO)
+# ============================================
+
 <IfModule mod_headers.c>
-    # Cache-Control para archivos estáticos
-    <FilesMatch "\.(webp|jpg|jpeg|png|gif|ico|svg|woff2|woff|ttf|otf)$">
+    # HSTS (HTTP Strict Transport Security) - 1 año
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Protección XSS
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevenir MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Prevenir clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Política de referencias
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permisos de características
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # CSP (Content Security Policy) - BÁSICO - AJUSTAR SEGÚN TUS NECESIDADES
+    # Header always set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+    
+    # Upgrade insecure requests (redirigir HTTP a HTTPS)
+    Header always set Content-Security-Policy "upgrade-insecure-requests"
+    
+    # Headers de caché específicos
+    <FilesMatch "\.(webp|jpg|jpeg|png|gif|ico|svg|woff2|woff|ttf|otf|eot)$">
         Header set Cache-Control "public, immutable, max-age=31536000"
         Header unset Last-Modified
     </FilesMatch>
@@ -165,50 +89,168 @@ ExpiresDefault "access plus 1 week"
         Header set Cache-Control "public, max-age=2592000"
     </FilesMatch>
     
-    <FilesMatch "\.(html|htm)$">
+    <FilesMatch "\.(html|htm|php)$">
         Header set Cache-Control "public, max-age=3600"
     </FilesMatch>
+</IfModule>
+
+# ============================================
+# 4. CACHÉ (EXPIRES HEADERS)
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
     
-    # Seguridad
-    Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options DENY
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Imágenes - 1 año
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/bmp "access plus 1 year"
+    
+    # Fuentes - 1 año
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    
+    # CSS y JS - 1 mes
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # Archivos de medios - 1 año
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType audio/mpeg "access plus 1 year"
+    ExpiresByType audio/ogg "access plus 1 year"
+    
+    # Documentos - 1 semana
+    ExpiresByType application/pdf "access plus 1 week"
+    ExpiresByType application/msword "access plus 1 week"
+    
+    # HTML - 1 hora (para contenido dinámico)
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # Por defecto - 1 semana
+    ExpiresDefault "access plus 1 week"
 </IfModule>
 
-<FilesMatch "\.(css|htc|less|js|js2|js3|js4|CSS|HTC|LESS|JS|JS2|JS3|JS4)$">
-    FileETag MTime Size
-    <IfModule mod_headers.c>
-        Header set Pragma "public"
-        Header append Cache-Control "public"
-    </IfModule>
+# ============================================
+# 5. PROTECCIÓN DE ARCHIVOS SENSIBLES
+# ============================================
+
+# Bloquear acceso a archivos ocultos (comienzan con punto)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
 </FilesMatch>
 
-<FilesMatch "\.(html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|SVG|SVGZ|TXT|XSD|XSL|XML)$">
-    FileETag MTime Size
-    <IfModule mod_headers.c>
-        Header set Pragma "public"
-        Header append Cache-Control "public"
-    </IfModule>
+# Bloquear archivos sensibles
+<FilesMatch "\.(env|log|ini|conf|sql|bak|tar|gz|zip)$">
+    Order allow,deny
+    Deny from all
 </FilesMatch>
 
-<FilesMatch "\.(asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|json|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|_ttf|wav|wma|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|zip|ASF|ASX|WAX|WMV|WMX|AVI|BMP|CLASS|DIVX|DOC|DOCX|EOT|EXE|GIF|GZ|GZIP|ICO|JPG|JPEG|JPE|JSON|MDB|MID|MIDI|MOV|QT|MP3|M4A|MP4|M4V|MPEG|MPG|MPE|MPP|OTF|_OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|PNG|POT|PPS|PPT|PPTX|RA|RAM|SVG|SVGZ|SWF|TAR|TIF|TIFF|TTF|TTC|_TTF|WAV|WMA|WRI|WOFF|WOFF2|XLA|XLS|XLSX|XLT|XLW|ZIP)$">
-    FileETag MTime Size
-    <IfModule mod_headers.c>
-        Header set Pragma "public"
-        Header append Cache-Control "public"
-    </IfModule>
-</FilesMatch>
+# Proteger wp-admin (si usas WordPress en algún subdirectorio)
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_URI} ^.*/wp-admin/?$
+#     RewriteRule ^ - [F,L]
+# </IfModule>
 
-<FilesMatch "\.(bmp|class|doc|docx|eot|exe|ico|json|mdb|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|pot|pps|ppt|pptx|svg|svgz|swf|tif|tiff|ttf|ttc|_ttf|wav|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|BMP|CLASS|DOC|DOCX|EOT|EXE|ICO|JSON|MDB|MPP|OTF|_OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|POT|PPS|PPT|PPTX|SVG|SVGZ|SWF|TIF|TIFF|TTF|TTC|_TTF|WAV|WRI|WOFF|WOFF2|XLA|XLS|XLSX|XLT|XLW)$">
-    <IfModule mod_headers.c>
-        Header unset Last-Modified
-    </IfModule>
-</FilesMatch>
+# ============================================
+# 6. ERROR PAGES PERSONALIZADAS
+# ============================================
 
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php74” package as the default “PHP” programming language.
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
+
+# Si no tienes páginas de error personalizadas, usar estas simples:
+# ErrorDocument 404 "<h1>Página no encontrada</h1><p>La página que buscas no existe en Everest Rubber Company.</p>"
+# ErrorDocument 500 "<h1>Error del servidor</h1><p>Disculpa las molestias. Estamos trabajando en solucionarlo.</p>"
+
+# ============================================
+# 7. SEO - URL AMIGABLES Y REDIRECCIONES
+# ============================================
+
+# Si necesitas URLs amigables (ej: de /producto.php?id=1 a /producto/1/)
+# Descomenta y ajusta según tu estructura:
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^producto/([0-9]+)/?$ producto.php?id=$1 [L,QSA]
+
+# ============================================
+# 8. OPTIMIZACIONES ADICIONALES
+# ============================================
+
+# Deshabilitar firma del servidor
+ServerSignature Off
+
+# Limitar métodos HTTP (solo GET, POST, HEAD)
+# <LimitExcept GET POST HEAD>
+#     Deny from all
+# </LimitExcept>
+
+# Prevenir hotlinking de imágenes (si quieres)
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^https?://(www\.)?everestrubbercompany\.com/.*$ [NC]
+# RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
+
+# ============================================
+# 9. CONFIGURACIÓN PHP (cPanel)
+# ============================================
+
 <IfModule mime_module>
-  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+    AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
 </IfModule>
-# php -- END cPanel-generated handler, do not edit
+
+# Aumentar límites PHP (si es necesario)
+# php_value upload_max_filesize 64M
+# php_value post_max_size 64M
+# php_value max_execution_time 300
+# php_value max_input_time 300
+
+# ============================================
+# 10. MIME TYPES (actualizados)
+# ============================================
+
+<IfModule mod_mime.c>
+    # WebP (moderno)
+    AddType image/webp .webp
+    
+    # Fuentes modernas
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+    
+    # SVG
+    AddType image/svg+xml .svg .svgz
+    
+    # JSON
+    AddType application/json .json
+    
+    # JavaScript moderno
+    AddType application/javascript .js .mjs
+    
+    # CSS
+    AddType text/css .css
+    
+    # HTML
+    AddType text/html .html .htm
+    
+    # XML
+    AddType text/xml .xml
+    
+    # Documentos
+    AddType application/pdf .pdf
+    AddType application/msword .doc .docx
+    AddType application/vnd.ms-excel .xls .xlsx
+    AddType application/vnd.ms-powerpoint .ppt .pptx
+</IfModule>
